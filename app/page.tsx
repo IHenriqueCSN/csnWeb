@@ -6,18 +6,18 @@ import ContactForm from "@/components/ContactForm";
 
 const infoSections = [
   {
-    title: "Otimização e Transformação Digital",
-    description: 'Otimização e Transformação Digital é um serviço que visa potencializar o sistema ERP da sua empresa com as melhores práticas de otimização e transformação digital. Com ele, é possível melhorar a eficiência dos processos, reduzir custos e aumentar a produtividade da sua equipe.',
-    image: "/images/otimizacao.jpg",
-    alignment: "left",
-    anchor: "otimizacao"
-  },
-  {
     title: "Instalações e Upgrades",
     description: 'O serviço de Instalações e Upgrades tem como objetivo manter o seu sistema ERP sempre atualizado. Com ele, é possível garantir que a sua empresa esteja utilizando a versão mais recente do software, com todas as funcionalidades e correções de segurança disponíveis.',
     image: "/images/upgrade.jpg",
-    alignment: "right",
+    alignment: "left",
     anchor: "upgrades"
+  },
+  {
+    title: "Glovia ERP",
+    description: 'O Glovia ERP é um sistema de gestão empresarial completo e integrado, que oferece soluções para todas as áreas da sua empresa. Com ele, é possível otimizar processos, reduzir custos e aumentar a produtividade da sua equipe.',
+    image: "/images/glovia.jpg",
+    alignment: "right",
+    anchor: "glovia"
   },
   {
     title: "Integração ERP",
@@ -51,45 +51,33 @@ const infoSections = [
 
 const services = [
   {
-    image: "/images/otimizacao.jpg",
-    name: "Otimização e Transformação Digital",
-    description:
-      "Potencialize seu sistema ERP com as melhores práticas de otimização e transformação digital.",
-    anchor: "otimizacao"
-  },
-  {
     image: "/images/upgrade.jpg",
     name: "Instalações e Upgrades",
-    description:
-      "Mantenha seu ERP sempre atualizado com instalações e upgrades eficientes.",
     anchor: "upgrades"
+  },
+  {
+    image: "/images/glovia.jpg",
+    name: "Glovia ERP",
+    anchor: "glovia"
   },
   {
     image: "/images/integracao.jpg",
     name: "Integração ERP",
-    description:
-      "Conecte diferentes sistemas para melhorar a eficiência e a comunicação interna.",
     anchor: "integracao"
   },
   {
     image: "/images/webdesign.jpg",
     name: "Web Design",
-    description:
-      "Crie um site moderno e responsivo para sua empresa com o nosso serviço de web design.",
     anchor: "webdesign"
   },
   {
     image: "/images/infra.jpg",
     name: "Infraestrutura",
-    description:
-      "Tenha uma infraestrutura de alta performance para suportar o crescimento do seu negócio.",
     anchor: "infraestrutura"
   },
   {
     image: "/images/support.jpg",
     name: "Suporte Técnico",
-    description:
-      "Conte com um suporte técnico especializado para resolver problemas e manter a estabilidade do seu sistema.",
     anchor: "suporte"
   },
 ];
@@ -101,7 +89,6 @@ export default function Home() {
       <main className="my-8">
         <ServicesGrid services={services} />
         <InfoSection sections={infoSections} />
-        <ContactForm />
         </main>
       <Footer companyName="CSN Technology" />
     </>
