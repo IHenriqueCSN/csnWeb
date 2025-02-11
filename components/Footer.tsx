@@ -5,7 +5,7 @@ interface FooterProps {
 const Footer = ({ companyName }: FooterProps) => {
     const footerLinks = {
         about: [
-            { title: "Sobre Nós", path: '/story' },
+            { title: "Sobre Nós", path: '/about-us' },
             { title: 'FAQ', path: '/faq' },
         ],
         legal: [
@@ -16,7 +16,7 @@ const Footer = ({ companyName }: FooterProps) => {
     };
 
 return (
-    <footer className="bg-black text-white py-12 mt-12">
+    <footer className="bg-black text-white py-12 mt-0">
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <div>

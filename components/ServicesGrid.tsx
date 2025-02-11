@@ -43,7 +43,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ services }) => {
         {services.map((service, index) => (
             <a className="cursor-pointer" key={index} onClick={(e) => { e.preventDefault(); handleScrollTo(service.anchor); }}>
             <div
-            className="text-center bg-white shadow-xl rounded-lg overflow-hidden transition transform flex flex-col"
+            className="text-center bg-white shadow-xl rounded-lg overflow-hidden transition transform flex flex-col justify-center"
             >
             <div className="relative flex-shrink-0">
               <Image
@@ -57,7 +57,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ services }) => {
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-20"></div>
             </div>
 
-            <div className="p-6 relative flex-grow pb-16">
+            <div className="p-6 relative flex-grow pb-16 flex items-center justify-center">
               <h3 className="text-2xl font-bold mb-2 text-gray-800">
               {service.name}
               </h3>

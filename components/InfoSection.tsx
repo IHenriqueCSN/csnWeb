@@ -19,7 +19,7 @@ interface InfoSectionProps {
 const InfoSection: React.FC<InfoSectionProps> = ({ sections }) => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      <div className="space-y-16">
+      <div className="space-y-16 overflow-x-hidden">
         {sections.map((section, index) => (
           <motion.div 
             key={index}
@@ -27,7 +27,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({ sections }) => {
             className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden"
             initial={{ 
               opacity: 0,
-              x: section.alignment === "right" ? 40 : -40,
+              x: section.alignment === "right" ? 24 : -24,
             }}
             whileInView={{ 
               opacity: 1,

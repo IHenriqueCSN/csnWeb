@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import ServicesGrid from "@/components/ServicesGrid";
 import InfoSection from "@/components/InfoSection";
 
-const infoSections = [
+const baseServices = [
   {
     title: "Instalações e Upgrades",
     description: 'O serviço de Instalações e Upgrades tem como objetivo manter o seu sistema ERP sempre atualizado. Com ele, é possível garantir que a sua empresa esteja utilizando a versão mais recente do software, com todas as funcionalidades e correções de segurança disponíveis.',
@@ -48,38 +48,19 @@ const infoSections = [
   }
 ];
 
-const services = [
-  {
-    image: "/images/upgrade.jpg",
-    name: "Instalações e Upgrades",
-    anchor: "upgrades"
-  },
-  {
-    image: "/images/glovia.jpg",
-    name: "Glovia ERP",
-    anchor: "glovia"
-  },
-  {
-    image: "/images/integracao.jpg",
-    name: "Integração ERP",
-    anchor: "integracao"
-  },
-  {
-    image: "/images/webdesign.jpg",
-    name: "Web Design",
-    anchor: "webdesign"
-  },
-  {
-    image: "/images/infra.jpg",
-    name: "Infraestrutura",
-    anchor: "infraestrutura"
-  },
-  {
-    image: "/images/support.jpg",
-    name: "Suporte Técnico",
-    anchor: "suporte"
-  },
-];
+const infoSections = baseServices.map(({ image, title, anchor, description, alignment }) => ({
+  title,
+  description,
+  image,
+  alignment,
+  anchor
+}));
+
+const services = baseServices.map(({ image, title, anchor }) => ({
+  image,
+  name: title,
+  anchor
+}));
 
 export default function Home() {
   return (
