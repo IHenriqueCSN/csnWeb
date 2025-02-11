@@ -1,8 +1,3 @@
-interface FooterLink {
-    title: string;
-    path: string;
-}
-
 interface FooterProps {
     companyName: string;
 }

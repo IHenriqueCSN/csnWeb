@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 interface Service {
   image: string;
@@ -46,7 +47,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ services }) => {
             className="bg-white shadow-xl rounded-lg overflow-hidden transition transform flex flex-col"
           >
             <div className="relative flex-shrink-0">
-              <img
+              <Image
                 src={service.image}
                 alt={service.name}
                 className="w-full h-48 object-cover"

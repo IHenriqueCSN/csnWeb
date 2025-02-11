@@ -18,7 +18,7 @@ const ContactForm = () => {
   
   const onSubmit: SubmitHandler<ContactFormData> = data => {
     console.log(data);
-    // Add your form submission logic here
+    // Add form submission logic here
   };
 
   return (

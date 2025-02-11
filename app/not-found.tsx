@@ -1,3 +1,5 @@
+import Link from 'next/link';	
+
 export default function NotFound() {
   return (
       <div className="flex min-h-screen flex-col items-center justify-center bg-orange-900 text-white text-center px-6">
@@ -9,12 +11,7 @@ export default function NotFound() {
           <p className="mt-3 text-base md:text-lg">
               Enquanto isso, você pode retornar à página inicial.
           </p>
-          <a 
-              href="/" 
-              className="mt-6 inline-block rounded-md bg-red-700 px-6 py-3 text-lg font-semibold transition hover:bg-red-800"
-          >
-              Voltar para a Página Inicial
-          </a>
+          <Link href="/" />
       </div>
   );
 }
