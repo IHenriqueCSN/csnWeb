@@ -2,7 +2,6 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ServicesGrid from "@/components/ServicesGrid";
 import InfoSection from "@/components/InfoSection";
-import ContactForm from "@/components/ContactForm";
 
 const infoSections = [
   {
