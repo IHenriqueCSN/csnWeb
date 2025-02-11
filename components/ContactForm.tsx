@@ -58,7 +58,7 @@ const ContactForm = () => {
               Sobrenome
             </label>
             <input
-              {...register("firstName", { required: true })}
+              {...register("lastName", { required: true })}
               className="w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base border-b-2 border-slate-300 bg-slate-50 focus:outline-none focus:border-blue-600 transition-colors placeholder-slate-400 font-medium"
               placeholder="Sobrenome"
             />
