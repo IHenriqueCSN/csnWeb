@@ -19,70 +19,97 @@ interface InfoSectionProps {
 const InfoSection: React.FC<InfoSectionProps> = ({ sections }) => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      <div className="space-y-20">
+      <div className="space-y-16">
         {sections.map((section, index) => (
           <motion.div 
             key={index}
             id={section.anchor}
-            className="relative bg-white rounded-2xl shadow-xl transition-all hover:shadow-2xl border border-gray-100 overflow-hidden"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px 0px -100px 0px" }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden"
+            initial={{ 
+              opacity: 0,
+              x: section.alignment === "right" ? 40 : -40,
+            }}
+            whileInView={{ 
+              opacity: 1,
+              x: 0,
+              transition: { 
+                duration: 0.4,
+                delay: index * 0.1,
+                ease: "easeOut" 
+              }
+            }}
+            viewport={{ once: true, margin: "0px 0px -50px 0px" }}
           >
-            {/* Animated Sticky Header */}
-            <motion.div 
-              className="sticky top-0 bg-white/95 backdrop-blur-sm z-20 border-b border-gray-100"
-              initial={{ boxShadow: "0 1px 0 rgba(0,0,0,0.05)" }}
-              whileInView={{ boxShadow: "0 4px 12px rgba(0,0,0,0.06)" }}
-              transition={{ duration: 0.05 }}
-            >
-              <div className="px-8 py-6 lg:px-12 lg:py-8">
-                <motion.h2 
-                  className="text-3xl font-semibold text-gray-900 tracking-tight origin-left"
-                  initial={{ scale: 0.98, opacity: 0.8 }}
+            <div className="px-6 py-4 border-b border-gray-100 overflow-hidden">
+              <motion.h2
+                className="text-2xl font-semibold text-gray-900"
+                initial={{ clipPath: 'inset(0 100% 0 0)' }}
+                whileInView={{ 
+                  clipPath: 'inset(0 0% 0 0)',
+                  transition: { 
+                    duration: 0.4,
+                    delay: 0.2 + index * 0.1,
+                    ease: "linear" 
+                  }
+                }}
+                viewport={{ once: true }}
+              >
+                {section.title}
+              </motion.h2>
+            </div>
+
+            <div className="px-6 py-8">
+              <div className={`flex flex-col ${
+                section.alignment === "right" ? "md:flex-row-reverse" : "md:flex-row"
+              } items-center gap-8`}>
+                <motion.div 
+                  className="w-full md:w-1/2 relative aspect-video"
+                  initial={{ opacity: 0, scale: 0.98 }}
                   whileInView={{ 
-                    scale: 1,
                     opacity: 1,
+                    scale: 1,
                     transition: { 
-                      duration: 0.4,
-                      ease: [0.25, 0.46, 0.45, 0.94],
-                    } 
+                      duration: 0.3,
+                      delay: 0.3 + index * 0.1,
+                      ease: "easeOut" 
+                    }
                   }}
                   viewport={{ once: true }}
                 >
-                  {section.title}
-                </motion.h2>
-              </div>
-            </motion.div>
-
-            {/* Content Container */}
-            <div className="px-8 py-6 lg:px-12 lg:py-10">
-              <div
-                className={`flex flex-col ${
-                  section.alignment === "right" ? "md:flex-row-reverse" : "md:flex-row"
-                } items-center gap-12`}
-              >
-                {/* Image Container */}
-                <div className="w-full md:w-1/2 relative aspect-video">
                   <Image
                     src={section.image}
                     alt={section.title}
                     fill
-                    className="rounded-xl object-cover shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+                    className="rounded-lg object-cover"
                     priority={index === 0}
                   />
-                </div>
+                </motion.div>
 
-                {/* Text Content */}
-                <div className="w-full md:w-1/2 space-y-4">
-                  <p className="text-md md:text-lg text-gray-600 leading-relaxed">
+                <motion.div 
+                  className="w-full md:w-1/2 space-y-4"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ 
+                    opacity: 1,
+                    y: 0,
+                    transition: { 
+                      duration: 0.3,
+                      delay: 0.4 + index * 0.1,
+                      ease: "easeOut" 
+                    }
+                  }}
+                  viewport={{ once: true }}
+                >
+                  <p className="text-gray-600 leading-relaxed">
                     {section.description}
                   </p>
-                  <button className="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300 shadow-sm hover:shadow-md">
+                  <motion.button 
+                    className="bg-blue-600 text-white px-5 py-2.5 rounded-md font-medium hover:bg-blue-700 transition-colors"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
                     Saiba Mais
-                  </button>
-                </div>
+                  </motion.button>
+                </motion.div>
               </div>
             </div>
           </motion.div>
