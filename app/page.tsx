@@ -1,5 +1,4 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import ServicesGrid from "@/components/ServicesGrid";
 import InfoSection from "@/components/InfoSection";
 
@@ -23,7 +22,7 @@ const baseServices = [
     description: 'Com o serviço de Integração ERP, é possível conectar diferentes sistemas da sua empresa para melhorar a eficiência e a comunicação interna. Com ele, é possível automatizar processos, reduzir erros e retrabalho, e melhorar a tomada de decisão.',
     image: "/images/integracao.jpg",
     alignment: "left",
-    anchor: "integracao"
+    anchor: "integration"
   },
   {
     title: "Web Design",
@@ -37,14 +36,14 @@ const baseServices = [
     description: 'Tenha uma infraestrutura de alta performance para suportar o crescimento do seu negócio. Com o serviço de Infraestrutura, é possível garantir que a sua empresa tenha os recursos necessários para suportar o aumento da demanda e a expansão dos negócios.',
     image: "/images/infra.jpg",
     alignment: "left",
-    anchor: "infraestrutura"
+    anchor: "infrastructure"
   },
   {
     title: "Suporte Técnico",
     description: 'Conte com um suporte técnico especializado para resolver problemas e manter a estabilidade do seu sistema. Com o serviço de Suporte Técnico, é possível garantir que a sua empresa tenha o apoio necessário para manter o seu sistema funcionando de forma eficiente e segura.',
     image: "/images/support.jpg",
     alignment: "right",
-    anchor: "suporte"
+    anchor: "support"
   }
 ];
 
@@ -65,12 +64,11 @@ const services = baseServices.map(({ image, title, anchor }) => ({
 export default function Home() {
   return (
     <>
-      <Header />
+    <Hero />
       <main className="my-8">
         <ServicesGrid services={services} />
         <InfoSection sections={infoSections} />
         </main>
-      <Footer companyName="CSN Technology" />
     </>
   )
 }

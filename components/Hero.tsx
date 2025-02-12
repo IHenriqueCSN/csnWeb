@@ -2,7 +2,7 @@
 import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 
-const Header = () => {
+const Hero = () => {
   const bgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -52,4 +52,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default Hero;

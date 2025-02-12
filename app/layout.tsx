@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "CSN Technology",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className="overflow-x-hidden">
         <NavBar />
         {children}
+        <Footer companyName="CSN Technology" />
       </body>
     </html>
   );

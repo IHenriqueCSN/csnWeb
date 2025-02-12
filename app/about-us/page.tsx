@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
 
 export default function Contato() {
@@ -7,7 +6,6 @@ export default function Contato() {
       <main className="mt-8">
         <AboutUs />
       </main>
-      <Footer companyName="CSN Technology" />
       </>
     )
   }

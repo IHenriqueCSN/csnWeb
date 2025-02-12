@@ -102,13 +102,15 @@ const InfoSection: React.FC<InfoSectionProps> = ({ sections }) => {
                   <p className="text-gray-600 leading-relaxed">
                     {section.description}
                   </p>
-                  <motion.button 
+                    <motion.button 
                     className="bg-blue-600 text-white px-5 py-2.5 rounded-md font-medium hover:bg-blue-700 transition-colors"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                  >
+                    onClick={() => window.location.href = `/services/${section.anchor}`}
+                    role="button"
+                    >
                     Saiba Mais
-                  </motion.button>
+                    </motion.button>
                 </motion.div>
               </div>
             </div>

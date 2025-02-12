@@ -39,6 +39,13 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ services }) => {
 
   return (
     <div className="p-6">
+      <div className="flex justify-center md:mb-4 md:-mt-4 -mt-8">
+        <div className="relative inline-block">
+          <h1 className="text-2xl md:text-4xl pb-6 text-center font-bold text-white relative z-10">
+            Nossos Serviços
+          </h1>
+        </div>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {services.map((service, index) => (
             <a className="cursor-pointer" key={index} onClick={(e) => { e.preventDefault(); handleScrollTo(service.anchor); }}>

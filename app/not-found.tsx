@@ -11,7 +11,7 @@ export default function NotFound() {
           <p className="mt-3 text-base md:text-lg">
               Enquanto isso, você pode retornar à página inicial.
           </p>
-          <Link href="/" />
+          <Link href="/" className="mt-3 md:text-lg underline">Clique aqui para retornar à pagina inicial.</Link>
       </div>
   );
 }
