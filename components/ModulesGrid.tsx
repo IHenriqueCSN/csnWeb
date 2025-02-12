@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 interface Module {
     name: string;
     description: string;
-    icon: React.ReactElement<any>;
+    icon: React.ReactElement<React.ComponentPropsWithoutRef<'svg'>>;
 }
 
 interface ModulesGridProps {
