@@ -8,7 +8,7 @@ import { FaWalkieTalkie } from "react-icons/fa6";
 
 const SERVICES = [
   { href: "/services/upgrades", label: "Instalações e Upgrades" },
-  { href: "/services/glovia", label: "Glovia ERP" },
+  { href: "/services/glovia", label: "Glovia® ERP" },
   { href: "/services/integration", label: "Integração ERP" },
   { href: "/services/webdesign", label: "Web Design" },
   { href: "/services/infrastructure", label: "Infraestrutura" },

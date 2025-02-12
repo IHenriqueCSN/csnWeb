@@ -20,10 +20,10 @@ export interface HeaderProps {
 
 const ServiceHeader: React.FC<HeaderProps> = ({ details }) => {
     return (
-        <header className="w-full relative overflow-hidden">
+        <header className="w-full relative overflow-hidden mb-8">
             {/* Background Container */}
             <div 
-                className="w-full min-h-[500px] flex items-center justify-center relative"
+                className="pt-6 md:pt-0 w-full min-h-[400px] md:min-h-[400px] flex items-center justify-center relative"
                 style={{
                     backgroundColor: details.colorScheme.primary,
                     backgroundImage: details.backgroundImage 
@@ -59,7 +59,7 @@ const ServiceHeader: React.FC<HeaderProps> = ({ details }) => {
                 {/* Content */}
                 <div className="relative z-10 text-center px-8">
                     <h1 
-                        className="text-6xl font-bold mb-6 animate-fade-in-up"
+                        className="text-3xl md:text-6xl font-bold mb-6 animate-fade-in-up"
                         style={{ 
                             color: details.colorScheme.tertiary,
                             textShadow: '0px 4px 6px rgba(0, 0, 0, 0.3)'
@@ -69,7 +69,7 @@ const ServiceHeader: React.FC<HeaderProps> = ({ details }) => {
                     </h1>
                     
                     <p 
-                        className="text-xl max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-100"
+                        className="text-md md:text-xl max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-100"
                         style={{ color: details.colorScheme.tertiary }}
                     >
                         {details.text}

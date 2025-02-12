@@ -167,7 +167,8 @@ export default function AboutPage() {
             Nossa equipe está preparada para entender seus desafios e propor
             soluções tecnológicas personalizadas.
           </p>
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            onClick={() => window.location.href = "/contact"}>
             Agendar Consultoria
           </button>
         </div>

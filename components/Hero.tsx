@@ -44,7 +44,8 @@ const Hero = () => {
           Soluções integradas em Glovia® ERP, desenvolvimento sob medida e infraestrutura de alta performance para impulsionar seu negócio.
           <span className="hidden sm:inline"> Transformamos desafios tecnológicos em vantagens competitivas.</span>
         </p>
-        <button className="mt-6 md:mt-8 rounded-md bg-blue-800 px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base font-bold transition hover:bg-blue-700 hover:scale-105">
+        <button className="mt-6 md:mt-8 rounded-md bg-blue-800 px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base font-bold transition hover:bg-blue-700 hover:scale-105"
+          onClick={() => window.location.href = "/contact"}>
           Solicite uma Demonstração
         </button>
       </div>

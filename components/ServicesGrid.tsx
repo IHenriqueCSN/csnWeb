@@ -9,10 +9,11 @@ interface Service {
 }
 
 interface ServicesGridProps {
+  title: string;
   services: Service[];
 }
 
-const ServicesGrid: React.FC<ServicesGridProps> = ({ services }) => {
+const ServicesGrid: React.FC<ServicesGridProps> = ({ title, services }) => {
   const handleScrollTo = (anchor: string) => {
     const navbar = document.querySelector('nav') || document.querySelector('#navbar');
     const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 64; // Fallback to 64px
@@ -42,7 +43,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ services }) => {
       <div className="flex justify-center md:mb-4 md:-mt-4 -mt-8">
         <div className="relative inline-block">
           <h1 className="text-2xl md:text-4xl pb-6 text-center font-bold text-white relative z-10">
-            Nossos Serviços
+            {title}
           </h1>
         </div>
       </div>

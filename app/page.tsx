@@ -11,8 +11,8 @@ const baseServices = [
     anchor: "upgrades"
   },
   {
-    title: "Glovia ERP",
-    description: 'O Glovia ERP é um sistema de gestão empresarial completo e integrado, que oferece soluções para todas as áreas da sua empresa. Com ele, é possível otimizar processos, reduzir custos e aumentar a produtividade da sua equipe.',
+    title: "Glovia® ERP",
+    description: 'O Glovia® ERP é um sistema de gestão empresarial completo e integrado, que oferece soluções para todas as áreas da sua empresa. Com ele, é possível otimizar processos, reduzir custos e aumentar a produtividade da sua equipe.',
     image: "/images/glovia.jpg",
     alignment: "right",
     anchor: "glovia"
@@ -66,7 +66,7 @@ export default function Home() {
     <>
     <Hero />
       <main className="my-8">
-        <ServicesGrid services={services} />
+        <ServicesGrid services={services} title="Nossos Serviços" />
         <InfoSection sections={infoSections} />
         </main>
     </>
