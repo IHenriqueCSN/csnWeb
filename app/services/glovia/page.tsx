@@ -33,7 +33,7 @@ export default function Glovia() {
       <>
       <main className="mt-8">
         <ServiceHeader details={gloviaDetails} />
-        <ModulesGrid modules={gloviaModules} title="Módulos do Glovia ERP" />
+        <ModulesGrid modules={gloviaModules} title="Módulos do Glovia® ERP" />
       </main>
       </>
     )

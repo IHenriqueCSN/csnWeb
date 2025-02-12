@@ -97,7 +97,7 @@ const ServicesDropdown = ({ currentPath }: { currentPath: string }) => {
       />
       
       {isOpen && (
-        <div className="absolute top-full left-0 mt-0 w-56 bg-blue-700 rounded-lg shadow-xl py-2">
+        <div className="absolute top-full left-0 mt-0 w-56 bg-[#101044] rounded-lg shadow-xl py-2">
           {SERVICES.map((service) => (
             <Link
               key={service.href}
@@ -123,7 +123,7 @@ const NavBar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-blue-700 shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#101044] shadow-md">
       <div className="max-w-7xl mx-auto px-4">
         {/* Desktop Navigation */}
         <div className="hidden md:grid grid-cols-5 items-center h-16">
@@ -164,7 +164,7 @@ const NavBar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden flex flex-col gap-2 bg-blue-700 p-4 border-t border-blue-600">
+          <div className="md:hidden flex flex-col gap-2 bg-[#101044] p-4 border-t border-blue-600">
             {ROUTES.map((route) => (
               route.href === "#" ? (
                 <div key={route.label} className="flex flex-col">
