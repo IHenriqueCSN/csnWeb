@@ -2,6 +2,7 @@ import ServiceHeader, { RGB } from "@/components/ServiceHeader";
 import ModulesGrid from "@/components/ModulesGrid";
 import { FaStore, FaUser, FaAddressBook, FaTractor, FaChartPie, FaIndustry,
   FaServer, FaChartArea, FaMoneyBill } from "react-icons/fa";
+import ScrollSpy from "@/components/ScrollingSection";
 
 const gloviaColors = {
   primary: 'rgb(39, 5, 0)' as RGB,
@@ -15,6 +16,13 @@ const gloviaDetails = {
     text: "O Glovia ERP é um sistema de gestão empresarial completo e integrado, que oferece soluções para todas as áreas da sua empresa. Com ele, é possível otimizar processos, reduzir custos e aumentar a produtividade da sua equipe.",
     backgroundImage: "/images/glovia.jpg"
 }
+
+const sectionData = [
+    { id: 'why-use', title: 'Strategic Advantage', content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima!" },
+    { id: 'benefits', title: 'Enterprise Benefits', content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima!" },
+    { id: 'how-it-works', title: 'Operational Excellence', content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima!" },
+    { id: 'testimonials', title: 'Industry Recognition', content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima!" },
+  ];
 
 const gloviaModules = [
   { name: "Gerenciamento de Produtos", icon: <FaStore />, description: "Controle completo do ciclo de vida de produtos, desde cadastro até rastreamento de estoque e especificações técnicas" },
@@ -34,6 +42,7 @@ export default function Glovia() {
       <main className="mt-8">
         <ServiceHeader details={gloviaDetails} />
         <ModulesGrid modules={gloviaModules} title="Módulos do Glovia® ERP" />
+        <ScrollSpy data={sectionData} />
       </main>
       </>
     )

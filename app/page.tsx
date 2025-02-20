@@ -68,7 +68,7 @@ export default function Home() {
       <main className="my-8">
         <ServicesGrid services={services} title="Nossos Serviços" />
         <InfoSection sections={infoSections} />
-        </main>
+      </main>
     </>
   )
 }

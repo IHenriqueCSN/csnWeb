@@ -1,3 +1,4 @@
+import ScrollSpy from "@/components/ScrollingSection"
 import ServiceHeader, { RGB } from "@/components/ServiceHeader";
 
 const webdesignColors = {
@@ -13,11 +14,16 @@ const webdesignDetails = {
     backgroundImage: "/images/webdesign.jpg"
 }
 
+const sectionData = [
+  {id: "why-use", title: "Strategic Advantage", content: "fsmkldfsml"}
+];
+
 export default function WebDesign() {
     return (
       <>
       <main className="mt-8">
         <ServiceHeader details={webdesignDetails} />
+        <ScrollSpy data={sectionData} />
       </main>
       </>
     )
