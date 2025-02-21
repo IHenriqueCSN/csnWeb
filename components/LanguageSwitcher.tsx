@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const LanguageSwitcher = ({ currentLocale, onLanguageChange }: { currentLocale: string, onLanguageChange: (locale: string) => void; }) => {
+const LanguageSwitcher = ({ currentLocale }: { currentLocale: string }) => {
   const [isHovered, setIsHovered] = useState<'en' | 'pt' | null>(null);
   const currentPath = usePathname();
   

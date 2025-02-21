@@ -192,10 +192,6 @@ const NavBar = ({ n, s }: { n: NavBarTranslations; s: ServiceTranslations }) => 
           {/* Language switcher positioned separately */}
           <LanguageSwitcher
             currentLocale={currentLocale}
-            onLanguageChange={(locale) => {
-              const newPath = getLocalizedPath(locale);
-              window.location.href = newPath;
-            }}
           />
         </div>
       </div>
