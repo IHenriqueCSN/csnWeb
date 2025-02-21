@@ -49,7 +49,23 @@
         "partners": "Nossos Parceiros",
         "cta_title": "Pronto para Transformar seu Negócio?",
         "cta_description": "Nossa equipe está preparada para entender seus desafios e propor soluções tecnológicas personalizadas.",
-        "cta_call": "Agendar Consultoria"
+        "cta_call": "Agendar Consultoria",
+        "principles": "Nossos Princípios Fundamentais",
+        "mission": "Missão",
+        "vision": "Visão",
+        "values": "Valores",
+        "commitment": "Compromisso com o Cliente",
+        "ethics": "Ética e Transparência",
+        "collaboration": "Colaboração",
+        "excellence": "Excelência",
+        "mission_text": "Na CSN Consultoria em Tecnologia, nossa missão é fornecer soluções tecnológicas integradas que impulsionem a transformação digital dos nossos clientes, agregando valor e contribuindo para o crescimento sustentável de seus negócios.",
+        "vision_text": "Ser a consultoria em tecnologia mais confiável e inovadora do setor, reconhecida por nossa capacidade de antecipar tendências e criar soluções que capacitem nossos clientes a se destacarem em um mercado em constante evolução.",
+        "values_text": "Fomentamos a criatividade e a busca por novas tecnologias e abordagens para resolver problemas de maneira eficaz.",
+        "commitment_text": "Nos dedicamos a entender e atender às necessidades únicas de cada cliente, priorizando sua satisfação e sucesso.",
+        "ethics_text": "Atuamos com integridade, construindo relacionamentos baseados na confiança e na honestidade.",
+        "collaboration_text": "Valorizamos o trabalho em equipe, acreditando que parcerias efetivas levam a soluções mais robustas e resultados superiores.",
+        "excellence_text": "Buscamos a excelência em tudo o que fazemos, desde a entrega dos nossos serviços até o relacionamento com nossos clientes e colaboradores."
+
     },
 
     "not_found": {

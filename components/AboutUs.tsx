@@ -4,19 +4,34 @@ import Image from "next/image";
 import { Briefcase, Users, Trophy, Heart, Target, Star, Gem, Award, Scale, Handshake } from "lucide-react"; // Requires lucide-react package
 
 interface AboutUsTranslations {
-  header: string;  
-  header_description: string;  
-  pillars: string;  
-  excellence_title: string;  
-  excellence_description: string;  
-  partnership_title: string;  
-  partnership_description: string;  
-  innovation_title: string;  
-  innovation_description: string;  
+  header: string;
+  header_description: string;
+  pillars: string;
+  excellence_title: string;
+  excellence_description: string;
+  partnership_title: string;
+  partnership_description: string;
+  innovation_title: string;
+  innovation_description: string;
   partners: string;
   cta_title: string;
   cta_description: string;
   cta_call: string;
+  principles: string;
+  mission: string;
+  vision: string;
+  values: string;
+  commitment: string;
+  ethics: string;
+  collaboration: string;
+  excellence: string;
+  mission_text: string;
+  vision_text: string;
+  values_text: string;
+  commitment_text: string;
+  ethics_text: string;
+  collaboration_text: string;
+  excellence_text: string;
 }
 
 export default function AboutPage({t}: {t: AboutUsTranslations}) {
@@ -88,45 +103,45 @@ export default function AboutPage({t}: {t: AboutUsTranslations}) {
 <div className="bg-gray-50 py-5 md:py-20">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">
-      Nossos Princípios Fundamentais
+      {t.principles}
     </h2>
     
     <div className="space-y-8">
       {[
         {
           icon: Target,
-          title: "Missão",
-          content: "Na CSN Consultoria em Tecnologia, nossa missão é fornecer soluções tecnológicas integradas que impulsionem a transformação digital dos nossos clientes, agregando valor e contribuindo para o crescimento sustentável de seus negócios."
+          title: t.mission,
+          content: t.mission_text
         },
         {
           icon: Star,
-          title: "Visão",
-          content: "Ser a consultoria em tecnologia mais confiável e inovadora do setor, reconhecida por nossa capacidade de antecipar tendências e criar soluções que capacitem nossos clientes a se destacarem em um mercado em constante evolução."
+          title: t.vision,
+          content: t.vision_text
         },
         {
           icon: Scale,
-          title: "Valores",
-          content: "Fomentamos a criatividade e a busca por novas tecnologias e abordagens para resolver problemas de maneira eficaz."
+          title: t.values,
+          content: t.values_text
         },
         {
           icon: Handshake,
-          title: "Compromisso com o Cliente",
-          content: "Nos dedicamos a enteder e atender às necessidades únicas de cada cliente, priorizando sua satisfação e sucesso."
+          title: t.commitment,
+          content: t.commitment_text
         },
         {
           icon: Gem,
-          title: "Ética e Transparência",
-          content: "Atuamos com integridade, construindo relacionamentos baseados na confiança e na honestidade."
+          title: t.ethics,
+          content: t.ethics_text
         },
         {
           icon: Users,
-          title: "Colaboração",
-          content: "Valorizamos o trabalho em equipe, acreditando que parcerias efetivas levam a soluções mais robustas e resultados superiores."
+          title: t.collaboration,
+          content: t.collaboration_text
         },
         {
           icon: Award,
-          title: "Excelência",
-          content: "Buscamos a excelência em tudo o que fazemos, desde a entrega dos nossos serviços até o relacionamento com nossos clientes e colaboradores."
+          title: t.excellence,
+          content: t.excellence_text
         }
       ].map((principle, index) => {
         const IconComponent = principle.icon;

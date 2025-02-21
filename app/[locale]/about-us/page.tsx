@@ -20,7 +20,22 @@ export default async function Contato() {
             partners: t('partners'),
             cta_title: t('cta_title'),
             cta_description: t('cta_description'),
-            cta_call: t('cta_call')
+            cta_call: t('cta_call'),
+            principles: t('principles'),
+            mission: t('mission'),
+            vision: t('vision'),
+            values: t('values'),
+            commitment: t('commitment'),
+            ethics: t('ethics'),
+            collaboration: t('collaboration'),
+            excellence: t('excellence'),
+            mission_text: t('mission_text'),
+            vision_text: t('vision_text'),
+            values_text: t('values_text'),
+            commitment_text: t('commitment_text'),
+            ethics_text: t('ethics_text'),
+            collaboration_text: t('collaboration_text'),
+            excellence_text: t('excellence_text')
           }}
         />
       </main>

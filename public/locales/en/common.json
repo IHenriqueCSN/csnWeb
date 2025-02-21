@@ -49,7 +49,23 @@
         "partners": "Our Partners",
         "cta_title": "Ready to Transform Your Business?",
         "cta_description": "Our team is here to tackle your challenges and deliver tailored tech solutions.",
-        "cta_call": "Schedule a Consultation"
+        "cta_call": "Schedule a Consultation",
+        "principles": "Our Fundamental Principals",
+        "mission": "Mission",
+        "vision": "Vision",
+        "values": "Values",
+        "commitment": "Commitment",
+        "ethics": "Ethics and Transparency",
+        "collaboration": "Collaboration",
+        "excellence": "Excellence",
+        "mission_text": "At CSN Consulting in Technology, our mission is to provide integrated technological solutions that drive the digital transformation of our clients, adding value and contributing to the sustainable growth of their businesses.",
+        "vision_text": "To be the most trusted and innovative technology consulting firm in the industry, recognized for our ability to anticipate trends and create solutions that empower our clients to stand out in an ever-evolving market.",
+        "values_text": "We foster creativity and the pursuit of new technologies and approaches to solve problems effectively.",
+        "commitment_text": "We are dedicated to understanding and meeting the unique needs of each client, prioritizing their satisfaction and success.",
+        "ethics_text": "We act with integrity, building relationships based on trust and honesty.",
+        "collaboration_text": "We value teamwork, believing that effective partnerships lead to more robust solutions and superior results.",
+        "excellence_text": "We strive for excellence in everything we do, from delivering our services to building relationships with our clients and collaborators."
+        
     },
 
     "not_found": {

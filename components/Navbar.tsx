@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { FaHome, FaUser, FaCog, FaTimes, FaBars, FaChevronDown } from "react-icons/fa";
 import { FaWalkieTalkie } from "react-icons/fa6";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const MobileMenuButton = ({
   isOpen,
@@ -93,21 +94,37 @@ const NavBar = ({ n, s }: { n: NavBarTranslations; s: ServiceTranslations }) => 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
+  // Get current locale from path
+  const segments = currentPath.split('/');
+  const currentLocale = (segments[1] === 'pt' || segments[1] === 'en') ? segments[1] : 'en';
+
+  // Generate localized routes
   const ROUTES: Route[] = [
-    { href: "/", label: n.home, icon: FaHome },
-    { href: "/about-us", label: n.about_us, icon: FaUser },
+    { href: `/${currentLocale}`, label: n.home, icon: FaHome },
+    { href: `/${currentLocale}/about-us`, label: n.about_us, icon: FaUser },
     { href: "#", label: n.services, icon: FaCog },
-    { href: "/contact", label: n.contact, icon: FaWalkieTalkie }
+    { href: `/${currentLocale}/contact`, label: n.contact, icon: FaWalkieTalkie }
   ];
 
   const SERVICES = [
-    { href: "/services/upgrades", label: s.upgrades },
-    { href: "/services/glovia", label: s.glovia },
-    { href: "/services/integration", label: s.integration },
-    { href: "/services/webdesign", label: s.webdesign },
-    { href: "/services/infrastructure", label: s.infrastructure },
-    { href: "/services/support", label: s.support },
+    { href: `/${currentLocale}/services/upgrades`, label: s.upgrades },
+    { href: `/${currentLocale}/services/glovia`, label: s.glovia },
+    { href: `/${currentLocale}/services/integration`, label: s.integration },
+    { href: `/${currentLocale}/services/webdesign`, label: s.webdesign },
+    { href: `/${currentLocale}/services/infrastructure`, label: s.infrastructure },
+    { href: `/${currentLocale}/services/support`, label: s.support },
   ];
+
+  // Language switcher logic
+  const getLocalizedPath = (locale: string) => {
+    const newSegments = [...segments];
+    if (newSegments[1] === 'en' || newSegments[1] === 'pt') {
+      newSegments[1] = locale;
+    } else {
+      newSegments.splice(1, 0, locale);
+    }
+    return newSegments.join('/');
+  };
 
   const ServicesDropdown = ({ currentPath }: { currentPath: string }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -146,13 +163,17 @@ const NavBar = ({ n, s }: { n: NavBarTranslations; s: ServiceTranslations }) => 
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#101044] shadow-md">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Desktop Navigation */}
-        <div className="hidden md:grid grid-cols-5 items-center h-16">
+    <div className="max-w-7xl mx-auto px-4">
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex items-center justify-between h-16">
+        <div className="flex items-center gap-4">
           <NavLink route={ROUTES[0]} currentPath={currentPath} />
           <NavLink route={ROUTES[1]} currentPath={currentPath} />
-          
-          <Link href="/" className="flex justify-center">
+        </div>
+        
+        {/* Centered logo */}
+        <div className="flex justify-center">
+          <Link href={`/${currentLocale}`} className="flex justify-center">
             <Image
               src="/images/logo.png"
               alt="CSN Technology"
@@ -161,10 +182,23 @@ const NavBar = ({ n, s }: { n: NavBarTranslations; s: ServiceTranslations }) => 
               className="h-12 w-12"
             />
           </Link>
+        </div>
 
+        {/* Right side navigation */}
+        <div className="flex items-center gap-4">
           <ServicesDropdown currentPath={currentPath} />
           <NavLink route={ROUTES[3]} currentPath={currentPath} />
+          
+          {/* Language switcher positioned separately */}
+          <LanguageSwitcher
+            currentLocale={currentLocale}
+            onLanguageChange={(locale) => {
+              const newPath = getLocalizedPath(locale);
+              window.location.href = newPath;
+            }}
+          />
         </div>
+      </div>
 
         {/* Mobile Navigation */}
         <div className="flex md:hidden items-center justify-between h-16">
@@ -229,6 +263,30 @@ const NavBar = ({ n, s }: { n: NavBarTranslations; s: ServiceTranslations }) => 
                 />
               )
             ))}
+            <div className="flex gap-2 mt-4">
+              <Link
+                href={getLocalizedPath('en')}
+                onClick={() => setIsMenuOpen(false)}
+                className={`flex-1 text-center px-4 py-2 rounded-md text-sm font-medium ${
+                  currentLocale === 'en' 
+                    ? 'bg-blue-800/50 text-white' 
+                    : 'text-gray-300 hover:bg-blue-800/30 hover:text-white'
+                }`}
+              >
+                English
+              </Link>
+              <Link
+                href={getLocalizedPath('pt')}
+                onClick={() => setIsMenuOpen(false)}
+                className={`flex-1 text-center px-4 py-2 rounded-md text-sm font-medium ${
+                  currentLocale === 'pt' 
+                    ? 'bg-blue-800/50 text-white' 
+                    : 'text-gray-300 hover:bg-blue-800/30 hover:text-white'
+                }`}
+              >
+                Português
+              </Link>
+            </div>
           </div>
         )}
       </div>
