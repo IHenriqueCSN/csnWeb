@@ -34,5 +34,45 @@
 
     "whatsapp": {
         "whatsapp": "Fale conosco pelo WhatsApp"
+    },
+
+    "about_us": {
+        "header": "Transformando Negócios com Tecnologia de Ponta",
+        "header_description": "Na CSN Technology, combinamos expertise técnica com visão estratégica para impulsionar a transformação digital de empresas. Com mais de uma década de experiência, entregamos soluções ERP personalizadas que otimizam operações e geram resultados tangíveis.",
+        "pillars": "Nossos Pilares Estratégicos",
+        "excellence_title": "Excelência Operacional",
+        "excellence_description": "Processos otimizados através de soluções ERP integradas",
+        "partnership_title": "Parceria Estratégica",
+        "partnership_description": "Relações de longo prazo baseadas em resultados mensuráveis",
+        "innovation_title": "Inovação Contínua",
+        "innovation_description": "Roadmap tecnológico alinhado às tendências globais",
+        "partners": "Nossos Parceiros",
+        "cta_title": "Pronto para Transformar seu Negócio?",
+        "cta_description": "Nossa equipe está preparada para entender seus desafios e propor soluções tecnológicas personalizadas.",
+        "cta_call": "Agendar Consultoria"
+    },
+
+    "not_found": {
+        "header": "Página em Construção",
+        "header_description_1": "Estamos trabalhando para trazer uma experiência ainda melhor para você.",
+        "header_description_2": "Em breve, esta página estará disponível com todas as informações necessárias.",
+        "return_title": "Enquanto isso, você pode retornar à página inicial.",
+        "return_cta": "Clique aqui para retornar à pagina inicial."
+    },
+
+    "contact": {
+        "title": "Entre em Contato Conosco",
+        "name": "Nome",
+        "surname": "Sobrenome",
+        "email": "Email",
+        "phone": "Telefone",
+        "subject": "Assunto",
+        "select_subject": "Selecione um tópico...",
+        "message": "Mensagem",
+        "send": "Enviar",
+        "required_field": "Este campo é obrigatório.",
+        "required_subject": "Por favor, selecione um assunto.",
+        "required_agreement": "Você deve concordar para continuar.",
+        "agreement": "Eu concordo com a política de privacidade (LGDP)."
     }
 }

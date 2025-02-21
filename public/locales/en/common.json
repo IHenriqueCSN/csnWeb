@@ -34,5 +34,45 @@
 
     "whatsapp": {
         "whatsapp": "Talk to us on WhatsApp"
+    },
+
+    "about_us": {
+        "header": "Transforming Businesses with Cutting-Edge Technology",
+        "header_description": "At CSN Technology, we combine technical expertise with strategic vision to drive digital transformation for businesses. With over a decade of experience, we deliver customized ERP solutions that optimize operations and generate tangible results.",
+        "pillars": "Our Strategic Pillars",
+        "excellence_title": "Operational Excellence",
+        "excellence_description": "Streamlined processes through integrated ERP solutions",
+        "partnership_title": "Strategic Partnership",
+        "partnership_description": "Long-term relationships built on measurable results",
+        "innovation_title": "Continuous Innovation",
+        "innovation_description": "Technology roadmap aligned with global trends",
+        "partners": "Our Partners",
+        "cta_title": "Ready to Transform Your Business?",
+        "cta_description": "Our team is here to tackle your challenges and deliver tailored tech solutions.",
+        "cta_call": "Schedule a Consultation"
+    },
+
+    "not_found": {
+        "header": "Page in Construction",
+        "header_description_1": "We are working to bring you an even better experience.",
+        "header_description_2": "Soon, this page will be available with all the necessary information.",
+        "return_title": "In the meantime, you can return to the homepage.",
+        "return_cta": "Click here to go back to the homepage."
+    },
+
+    "contact": {
+        "title": "Contact Us",
+        "name": "First Name",
+        "surname": "Last Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "subject": "Subject",
+        "select_subject": "Select a subject...",
+        "message": "Message",
+        "send": "Send",
+        "required_field": "This field is required.",
+        "required_subject": "Please select a subject.",
+        "required_agreement": "You must agree to continue.",
+        "agreement": "I agree with the privacy policy."
     }
 }

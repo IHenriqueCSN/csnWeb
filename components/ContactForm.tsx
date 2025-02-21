@@ -4,6 +4,22 @@ import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { FaPaperPlane, FaBuilding, FaRegAddressCard } from "react-icons/fa";
 
+interface ContactFormTranslations {
+  title: string;
+  name: string;
+  surname: string;
+  email: string;
+  phone: string;
+  subject: string;
+  select_subject: string;
+  message: string;
+  agreement: string;
+  send: string;
+  required_field: string;
+  required_subject: string;
+  required_agreement: string;
+}
+
 interface ContactFormData {
   firstName: string;
   lastName: string;
@@ -14,7 +30,7 @@ interface ContactFormData {
   privacyPolicy: boolean;
 }
 
-const ContactForm = () => {
+const ContactForm = ({t}: {t: ContactFormTranslations}) => {
   const { register, handleSubmit, formState: { errors } } = useForm<ContactFormData>();
   
   const onSubmit: SubmitHandler<ContactFormData> = data => {
@@ -30,7 +46,7 @@ const ContactForm = () => {
           <div className="flex items-center gap-3">
             <FaBuilding className="h-6 w-6 md:h-8 md:w-8 text-white opacity-90" />
             <h2 className="text-2xl md:text-3xl font-bold text-white tracking-wide">
-              Entre em Contato Conosco
+              {t.title}
             </h2>
           </div>
         </div>
@@ -39,15 +55,15 @@ const ContactForm = () => {
         <div className="relative sm:col-span-1">
             <label className="block text-xs sm:text-sm font-semibold text-slate-700 uppercase tracking-wide mb-1 sm:mb-2">
             <FaRegAddressCard className="inline mr-1 text-blue-600 h-3 w-3 sm:h-4 sm:w-4" />
-                Nome
+                {t.name}
             </label>
             <input
               {...register("firstName", { required: true })}
               className="w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base border-b-2 border-slate-300 bg-slate-50 focus:outline-none focus:border-blue-600 transition-colors placeholder-slate-400 font-medium"
-              placeholder="Nome"
+              placeholder={t.name}
             />
             {errors.firstName && (
-              <p className="mt-1 text-sm text-red-600">Este campo é obrigatório</p>
+              <p className="mt-1 text-sm text-red-600">{t.required_field}</p>
             )}
           </div>
 
@@ -55,22 +71,22 @@ const ContactForm = () => {
           <div className="relative sm:col-span-1">
           <label className="block text-xs sm:text-sm font-semibold text-slate-700 uppercase tracking-wide mb-1 sm:mb-2">
           <FaRegAddressCard className="inline mr-1 text-blue-600 h-3 w-3 sm:h-4 sm:w-4" />
-              Sobrenome
+              {t.surname}
             </label>
             <input
               {...register("lastName", { required: true })}
               className="w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base border-b-2 border-slate-300 bg-slate-50 focus:outline-none focus:border-blue-600 transition-colors placeholder-slate-400 font-medium"
-              placeholder="Sobrenome"
+              placeholder={t.surname}
             />
             {errors.lastName && (
-              <p className="mt-1 text-sm text-red-600">Este campo é obrigatório</p>
+              <p className="mt-1 text-sm text-red-600">{t.required_field}</p>
             )}
           </div>
 
           {/* Email */}
           <div className="relative col-span-1 sm:col-span-2">
             <label className="block text-xs sm:text-sm font-semibold text-slate-700 uppercase tracking-wide mb-1 sm:mb-2">
-              📧 Email Corporativo
+              📧 {t.email}
             </label>
             <input
               {...register("email", { 
@@ -81,7 +97,7 @@ const ContactForm = () => {
               placeholder="john.doe@businesscorp.com"
             />
             {errors.email?.type === "required" && (
-              <p className="mt-1 text-sm text-red-600">Este campo é obrigatório</p>
+              <p className="mt-1 text-sm text-red-600">{t.required_field}</p>
             )}
             {errors.email?.type === "pattern" && (
               <p className="mt-1 text-sm text-red-600">Por favor informe um email válido</p>
@@ -91,7 +107,7 @@ const ContactForm = () => {
           {/* Phone */}
           <div className="relative col-span-1 sm:col-span-2">
             <label className="block text-xs sm:text-sm font-semibold text-slate-700 uppercase tracking-wide mb-1 sm:mb-2">
-              📞 Telefone
+              📞 {t.phone}
             </label>
             <input
               {...register("phone")}
@@ -104,27 +120,27 @@ const ContactForm = () => {
           {/* Subject */}
           <div className="relative col-span-1 sm:col-span-2">
             <label className="block text-xs sm:text-sm font-semibold text-slate-700 uppercase tracking-wide mb-1 sm:mb-2">
-              📑 Assunto
+              📑 {t.subject}
             </label>
             <select
               {...register("subject", { required: true })}
               className="w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base border-b-2 border-slate-300 bg-slate-50 focus:outline-none focus:border-blue-600 appearance-none cursor-pointer"
             >
-              <option value="">Selecione um tópico...</option>
+              <option value="">{t.select_subject}</option>
               <option value="sales">Business Synergy Proposal</option>
               <option value="support">Leveraging Core Competencies</option>
               <option value="partnership">Strategic Alliance Opportunity</option>
               <option value="other">Other Mission-Critical Matter</option>
             </select>
             {errors.subject && (
-              <p className="mt-1 text-sm text-red-600">Por favor selecione um assunto</p>
+              <p className="mt-1 text-sm text-red-600">{t.required_subject}</p>
             )}
           </div>
 
           {/* Message */}
           <div className="relative col-span-1 sm:col-span-2">
             <label className="block text-xs sm:text-sm font-semibold text-slate-700 uppercase tracking-wide mb-1 sm:mb-2">
-              📄 Mensagem
+              📄 {t.message}
             </label>
             <textarea
               {...register("message", { required: true })}
@@ -182,7 +198,7 @@ const ContactForm = () => {
                     strokeLinecap="round" 
                     strokeLinejoin="round"/>
                 </svg>
-                Você deve concordar para continuar.
+                {t.required_agreement}
                 </p>
             )}
             </div>
@@ -194,7 +210,7 @@ const ContactForm = () => {
               className="w-full flex items-center justify-center space-x-2 px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
             >
               <FaPaperPlane className="w-4 h-4 sm:w-5 sm:h-5 text-blue-100" />
-              <span>Enviar Mensagem</span>
+              <span>{t.send}</span>
             </button>
           </div>
         </form>

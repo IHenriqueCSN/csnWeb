@@ -3,7 +3,23 @@
 import Image from "next/image";
 import { Briefcase, Users, Trophy, Heart, Target, Star, Gem, Award, Scale, Handshake } from "lucide-react"; // Requires lucide-react package
 
-export default function AboutPage() {
+interface AboutUsTranslations {
+  header: string;  
+  header_description: string;  
+  pillars: string;  
+  excellence_title: string;  
+  excellence_description: string;  
+  partnership_title: string;  
+  partnership_description: string;  
+  innovation_title: string;  
+  innovation_description: string;  
+  partners: string;
+  cta_title: string;
+  cta_description: string;
+  cta_call: string;
+}
+
+export default function AboutPage({t}: {t: AboutUsTranslations}) {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -11,12 +27,10 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl font-bold text-gray-900 tracking-tight">
-              Transformando Negócios com Tecnologia de Ponta
+              {t.header}
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Na CSN Technology, combinamos expertise técnica com visão estratégica para impulsionar 
-              a transformação digital de empresas. Com mais de uma década de experiência, entregamos 
-              soluções ERP personalizadas que otimizam operações e geram resultados tangíveis.
+              {t.header_description}
             </p>
           </div>
           <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg">
@@ -37,24 +51,24 @@ export default function AboutPage() {
       <div className="bg-white py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">
-            Nossos Pilares Estratégicos
+            {t.pillars}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { 
                 icon: Briefcase, 
-                title: "Excelência Operacional",
-                text: "Processos otimizados através de soluções ERP integradas"
+                title: t.excellence_title,
+                text: t.excellence_description
               },
               { 
                 icon: Users, 
-                title: "Parceria Estratégica",
-                text: "Relações de longo prazo baseadas em resultados mensuráveis"
+                title: t.partnership_title,
+                text: t.partnership_description
               },
               { 
                 icon: Trophy, 
-                title: "Inovação Contínua",
-                text: "Roadmap tecnológico alinhado às tendências globais"
+                title: t.innovation_title,
+                text: t.innovation_description
               },
             ].map((item, index) => (
               <div 
@@ -146,7 +160,7 @@ export default function AboutPage() {
       <div className="bg-gray-50 pt-0 pb-20" id="clients">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">
-            Nossos Parceiros
+            {t.partners}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-75">
             {[...Array(8)].map((_, i) => (
@@ -161,15 +175,14 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Heart className="h-16 w-16 mx-auto mb-8" />
           <h2 className="text-3xl font-bold mb-6">
-            Pronto para Transformar seu Negócio?
+            {t.cta_title}
           </h2>
           <p className="text-lg mb-8">
-            Nossa equipe está preparada para entender seus desafios e propor
-            soluções tecnológicas personalizadas.
+            {t.cta_description}
           </p>
           <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             onClick={() => window.location.href = "/contact"}>
-            Agendar Consultoria
+            {t.cta_call}
           </button>
         </div>
       </div>
