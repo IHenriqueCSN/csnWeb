@@ -2,7 +2,14 @@
 import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 
-const Hero = () => {
+interface HeroTranslations {
+  welcome: string;
+  description: string;
+  motto: string;
+  cta_call: string;
+}
+
+export default function Hero({ t }: {t: HeroTranslations}) {
   const bgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -38,19 +45,25 @@ const Hero = () => {
       {/* Content Layer */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-4 sm:px-6 pb-4">
         <h1 className="mb-2 md:mb-4 text-4xl md:text-5xl font-bold px-2">
-          Bem-vindo à <span className="text-blue-400 block md:inline">CSN Technology™</span>
+          {/* Bem-vindo à <span className="text-blue-400 block md:inline">CSN Technology™</span> */}
+          {t.welcome}
         </h1>
         <p className="text-base md:text-xl max-w-[90%] md:max-w-2xl font-medium mt-2">
-          Soluções integradas em Glovia® ERP, desenvolvimento sob medida e infraestrutura de alta performance para impulsionar seu negócio.
-          <span className="hidden sm:inline"> Transformamos desafios tecnológicos em vantagens competitivas.</span>
+          {/* Soluções integradas em Glovia® ERP, desenvolvimento sob medida e infraestrutura de alta performance para impulsionar seu negócio. */}
+          {t.description}
         </p>
+          <p>
+            <span className="hidden sm:block mt-2 sm:text-lg">
+              {/* Transformamos desafios tecnológicos em vantagens competitivas. */}
+            {t.motto}
+            </span>
+          </p>
         <button className="mt-6 md:mt-8 rounded-md bg-blue-800 px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base font-bold transition hover:bg-blue-700 hover:scale-105"
           onClick={() => window.location.href = "/contact"}>
-          Solicite uma Demonstração
+          {/* Solicite uma Demonstração */}
+          {t.cta_call}
         </button>
       </div>
     </header>
   )
 }
-
-export default Hero;

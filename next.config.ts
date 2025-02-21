@@ -1,10 +1,12 @@
+const withNextIntl = require('next-intl/plugin')('./i18n/request.ts');
+
 const nextConfig = {
     output: 'export',
     distDir: 'out',
     basePath: '/csnWeb',
   };
 
-module.exports = {
+module.exports = withNextIntl({
   async redirects() {
     return [
       {
@@ -13,5 +15,5 @@ module.exports = {
         permanent: true,
       }
     ]
-  }
-}
+  },
+})

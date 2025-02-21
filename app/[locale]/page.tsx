@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import ServicesGrid from "@/components/ServicesGrid";
 import InfoSection from "@/components/InfoSection";
+import { getTranslations } from "next-intl/server";
 
 const baseServices = [
   {
@@ -61,14 +62,21 @@ const services = baseServices.map(({ image, title, anchor }) => ({
   anchor
 }));
 
-export default function Home() {
-  return (
-    <>
-    <Hero />
-      <main className="my-8">
-        <ServicesGrid services={services} title="Nossos Serviços" />
-        <InfoSection sections={infoSections} />
-      </main>
-    </>
-  )
+export default async function Home() {
+  try {
+    const t = await getTranslations('common');
+    
+    return (
+      <>
+        <Hero t={{ welcome: t('welcome'), description: t('description'), cta_call: t('cta_call'), motto: t('motto') }} />
+        <main className="my-8">
+          <ServicesGrid services={services} title={t('our_services')} />
+          <InfoSection sections={infoSections} />
+        </main>
+      </>
+    );
+  } catch (error) {
+    console.error('Translation error:', error);
+    throw error;
+  }
 }

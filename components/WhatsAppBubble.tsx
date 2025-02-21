@@ -1,6 +1,10 @@
 import styles from './WhatsAppBubble.module.css';
 
-const WhatsAppBubble = () => {
+interface WhatsAppTranslations {
+  whatsapp: string;
+}
+
+const WhatsAppBubble = ({w}: {w: WhatsAppTranslations}) => {
   return (
     <div className={styles.container}>
       <a
@@ -9,7 +13,7 @@ const WhatsAppBubble = () => {
         rel="noopener noreferrer"
         className={styles.link}
       >
-        <span className={styles.text}>Fale conosco pelo WhatsApp</span>
+        <span className={styles.text}>{w.whatsapp}</span>
         <img 
           src="/images/whatsapp.png" 
           alt="Chat on WhatsApp"

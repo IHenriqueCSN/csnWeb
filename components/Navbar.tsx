@@ -1,26 +1,10 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { FaHome, FaUser, FaCog, FaTimes, FaBars, FaChevronDown } from "react-icons/fa";
 import { FaWalkieTalkie } from "react-icons/fa6";
-
-const SERVICES = [
-  { href: "/services/upgrades", label: "Instalações e Upgrades" },
-  { href: "/services/glovia", label: "Glovia® ERP" },
-  { href: "/services/integration", label: "Integração ERP" },
-  { href: "/services/webdesign", label: "Web Design" },
-  { href: "/services/infrastructure", label: "Infraestrutura" },
-  { href: "/services/support", label: "Suporte Técnico" },
-];
-
-const ROUTES = [
-  { href: "/", label: "Home", icon: FaHome },
-  { href: "/about-us", label: "Quem Somos", icon: FaUser },
-  { href: "#", label: "Serviços", icon: FaCog },
-  { href: "/contact", label: "Contato", icon: FaWalkieTalkie },
-] as const;
 
 const MobileMenuButton = ({
   isOpen,
@@ -44,7 +28,7 @@ const NavLink = ({
   isMobile,
   onClick,
 }: {
-  route: typeof ROUTES[number];
+  route: Route;
   currentPath: string;
   isMobile?: boolean;
   onClick?: () => void;
@@ -59,7 +43,7 @@ const NavLink = ({
       } ${isMobile ? "w-full text-center" : ""}`}
     >
       <div className="flex justify-center items-center gap-2">
-        <route.icon className="w-5 h-5" />
+        <route.icon />
         {route.label}
         {!isMobile && <FaChevronDown className="w-4 h-4 mt-0.5" />}
       </div>
@@ -75,52 +59,90 @@ const NavLink = ({
       } ${isMobile ? "w-full text-center" : ""}`}
     >
       <div className="flex justify-center items-center gap-2">
-        <route.icon className="w-5 h-5" />
+        <route.icon />
         {route.label}
       </div>
     </Link>
   );
 };
 
-const ServicesDropdown = ({ currentPath }: { currentPath: string }) => {
-  const [isOpen, setIsOpen] = useState(false);
+interface NavBarTranslations {
+  home: string;
+  about_us: string;
+  services: string;
+  contact: string;
+}
 
-  return (
-    <div 
-      className="relative"
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
-    >
-      <NavLink
-        route={ROUTES[2]}
-        currentPath={currentPath}
-      />
-      
-      {isOpen && (
-        <div className="absolute top-full left-0 mt-0 w-56 bg-[#101044] rounded-lg shadow-xl py-2">
-          {SERVICES.map((service) => (
-            <Link
-              key={service.href}
-              href={service.href}
-              className={`block px-6 py-3 text-sm transition-colors ${
-                currentPath === service.href
-                  ? "bg-blue-800/50 text-white"
-                  : "text-gray-300 hover:bg-blue-800/30 hover:text-white"
-              }`}
-            >
-              {service.label}
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
+interface ServiceTranslations {
+  upgrades: string;
+  glovia: string;
+  integration: string;
+  webdesign: string;
+  infrastructure: string;
+  support: string;
+}
 
-const NavBar = () => {
+type Route = {
+  href: string;
+  label: string;
+  icon: React.ComponentType;
+}
+
+const NavBar = ({ n, s }: { n: NavBarTranslations; s: ServiceTranslations }) => {
   const currentPath = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  const ROUTES: Route[] = [
+    { href: "/", label: n.home, icon: FaHome },
+    { href: "/about-us", label: n.about_us, icon: FaUser },
+    { href: "#", label: n.services, icon: FaCog },
+    { href: "/contact", label: n.contact, icon: FaWalkieTalkie }
+  ];
+
+  const SERVICES = [
+    { href: "/services/upgrades", label: s.upgrades },
+    { href: "/services/glovia", label: s.glovia },
+    { href: "/services/integration", label: s.integration },
+    { href: "/services/webdesign", label: s.webdesign },
+    { href: "/services/infrastructure", label: s.infrastructure },
+    { href: "/services/support", label: s.support },
+  ];
+
+  const ServicesDropdown = ({ currentPath }: { currentPath: string }) => {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    return (
+      <div 
+        className="relative"
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+      >
+        <NavLink
+          route={ROUTES[2]}
+          currentPath={currentPath}
+        />
+        
+        {isOpen && (
+          <div className="absolute top-full left-0 mt-0 w-56 bg-[#101044] rounded-lg shadow-xl py-2">
+            {SERVICES.map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className={`block px-6 py-3 text-sm transition-colors ${
+                  currentPath === service.href
+                    ? "bg-blue-800/50 text-white"
+                    : "text-gray-300 hover:bg-blue-800/30 hover:text-white"
+                }`}
+              >
+                {service.label}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#101044] shadow-md">
@@ -173,7 +195,7 @@ const NavBar = () => {
                     className="text-lg px-4 py-2 rounded-md text-gray-300 hover:text-white hover:bg-blue-800/30"
                   >
                     <div className="flex items-center justify-center gap-2">
-                      <route.icon className="w-5 h-5" />
+                      <route.icon />
                       {route.label}
                       <FaChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? "rotate-180" : ""}`}/>
                     </div>

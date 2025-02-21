@@ -1,0 +1,38 @@
+{
+    "common": {
+        "welcome": "Welcome to CSN Technology™",
+        "description": "Integrated solutions in Glovia® ERP, custom development, and high-performance infrastructure to drive your business forward.",
+        "motto": "We turn technological challenges into competitive advantages.",
+        "cta_call": "Request a Demo",
+        "our_services": "Our Services"
+    },
+    
+    "navbar": {
+        "home": "Home",
+        "about_us": "About Us",
+        "services": "Services",
+        "contact": "Contact"
+    },
+
+    "services": {
+        "upgrades": "Upgrades",
+        "glovia": "Glovia® ERP",
+        "integration": "Integration ERP",
+        "webdesign": "Web Design",
+        "infrastructure": "Infrastructure",
+        "support": "Support"
+    },
+
+    "footer": {
+        "about_us": "About Us",
+        "privacy": "Privacy Policy",
+        "terms": "Terms and Conditions",
+        "contact": "Contact",
+        "motto": "Building innovative solutions.",
+        "rights": "All rights reserved."
+    },
+
+    "whatsapp": {
+        "whatsapp": "Talk to us on WhatsApp"
+    }
+}
