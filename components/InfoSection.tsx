@@ -22,6 +22,7 @@ interface InfoSectionProps {
 }
 
 const InfoSection: React.FC<InfoSectionProps> = ({ sections, t }) => {
+  console.log(document.documentElement.lang);
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
       <div className="space-y-16 overflow-x-hidden">
@@ -111,7 +112,10 @@ const InfoSection: React.FC<InfoSectionProps> = ({ sections, t }) => {
                     className="bg-blue-600 text-white px-5 py-2.5 rounded-md font-medium hover:bg-blue-700 transition-colors"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    onClick={() => window.location.href = `/services/${section.anchor}`}
+                    onClick={() => {
+                      const locale = document.documentElement.lang;
+                      window.location.href = `/${locale}/services/${section.anchor}`
+                    }}
                     role="button"
                     >
                     {t.learn_more}

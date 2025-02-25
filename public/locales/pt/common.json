@@ -97,5 +97,31 @@
         "required_subject": "Por favor, selecione um assunto.",
         "required_agreement": "Você deve concordar para continuar.",
         "agreement": "Eu concordo com a política de privacidade (LGDP)."
-    }
+    },
+    
+    "modules": {
+        "glovia": {
+            "modules_title": "Módulos do Glovia® ERP",
+            "gerenciamento_de_produtos": "Gerenciamento de Produtos",
+            "gerenciamento_de_clientes": "Gerenciamento de Clientes",
+            "gerenciamento_de_fornecedores": "Gerenciamento de Fornecedores",
+            "business_intelligence": "Business Intelligence",
+            "cadeia_de_suprimentos": "Cadeia de Suprimentos",
+            "manufatura": "Manufatura",
+            "gerenciamento_de_servicos": "Gerenciamento de Serviços",
+            "gerenciamento_de_projetos": "Gerenciamento de Projetos",
+            "financeiro": "Financeiro",
+            "descriptions": {
+                "gerenciamento_de_produtos": "Controle completo do ciclo de vida de produtos, desde cadastro até rastreamento de estoque e especificações técnicas",
+                "gerenciamento_de_clientes": "Centralização de dados de clientes, histórico de compras e interações para relacionamento personalizado",
+                "gerenciamento_de_fornecedores": "Gestão estratégica de parceiros comerciais com avaliação de desempenho e controle de processos de compras",
+                "business_intelligence": "Análise de dados em tempo real com dashboards interativos e relatórios para tomada de decisão estratégica",
+                "cadeia_de_suprimentos": "Otimização logística integrada com gestão de demanda, planejamento de distribuição e controle de inventário",
+                "manufatura": "Controle de processos produtivos com gestão de recursos, ordens de produção e garantia de qualidade",
+                "gerenciamento_de_servicos": "Organização de contratos, SLA's e atendimentos técnicos para excelência em serviços pós-venda",
+                "gerenciamento_de_projetos": "Planejamento e acompanhamento de projetos com alocação de recursos, cronogramas e indicadores de desempenho",
+                "financeiro": "Gestão integrada de contas, fluxo de caixa, cobranças e conformidade com normas fiscais contábeis"
+                }
+            }
+        }
 }

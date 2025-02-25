@@ -1,7 +1,6 @@
 import ServiceHeader, { RGB } from "@/components/ServiceHeader";
 import ModulesGrid from "@/components/ModulesGrid";
-import { FaStore, FaUser, FaAddressBook, FaTractor, FaChartPie, FaIndustry,
-  FaServer, FaChartArea, FaMoneyBill } from "react-icons/fa";
+import { FaStore, FaUser, FaAddressBook, FaTractor, FaChartPie, FaIndustry, FaServer, FaChartArea, FaMoneyBill } from "react-icons/fa";
 import ScrollSpy from "@/components/ScrollingSection";
 import { getTranslations } from "next-intl/server";
 
@@ -12,18 +11,18 @@ const gloviaColors = {
 };
 
 const gloviaDetails = {
-    title: "Glovia® ERP",
-    colorScheme: gloviaColors,
-    text: "O Glovia ERP é um sistema de gestão empresarial completo e integrado, que oferece soluções para todas as áreas da sua empresa. Com ele, é possível otimizar processos, reduzir custos e aumentar a produtividade da sua equipe.",
-    backgroundImage: "/images/glovia.jpg"
+  title: "Glovia® ERP",
+  colorScheme: gloviaColors,
+  text: "O Glovia ERP é um sistema de gestão empresarial completo e integrado, que oferece soluções para todas as áreas da sua empresa. Com ele, é possível otimizar processos, reduzir custos e aumentar a produtividade da sua equipe.",
+  backgroundImage: "/images/glovia.jpg"
 }
 
 const sectionData = [
-    { id: 'why-use', title: 'Strategic Advantage', content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima!" },
-    { id: 'benefits', title: 'Enterprise Benefits', content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima!" },
-    { id: 'how-it-works', title: 'Operational Excellence', content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima!" },
-    { id: 'testimonials', title: 'Industry Recognition', content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi id sunt facilis eligendi. Perferendis quis architecto magni praesentium dolor pariatur, velit voluptatibus voluptas nesciunt eos modi consequatur aliquid nihil minima!" },
-  ];
+  { id: 'why-use', title: 'Strategic Advantage', content: "..." },
+  { id: 'benefits', title: 'Enterprise Benefits', content: "..." },
+  { id: 'how-it-works', title: 'Operational Excellence', content: "..." },
+  { id: 'testimonials', title: 'Industry Recognition', content: "..." },
+];
 
 const gloviaModules = [
   { name: "Gerenciamento de Produtos", icon: <FaStore />, description: "Controle completo do ciclo de vida de produtos, desde cadastro até rastreamento de estoque e especificações técnicas" },
@@ -38,24 +37,33 @@ const gloviaModules = [
 ];
 
 export default async function Glovia() {
-    try {
-      const t = await getTranslations('services');
-      const translatedDetails = {
-        ...gloviaDetails,
-        title: t('glovia'),
-        text: t('glovia_description')
-      };
-      return (
-        <>
+  try {
+    const t = await getTranslations('services');
+    const m = await getTranslations('modules.glovia');
+    
+    const translatedDetails = {
+      ...gloviaDetails,
+      title: t('glovia'),
+      text: t('glovia_description')
+    };
+
+    const translatedModules = gloviaModules.map(module => ({
+      ...module,
+      name: m(`${module.name.toLowerCase().replace(/\s+/g, '_').normalize('NFD').replace(/[\u0300-\u036f]/g, '')}`),
+    description: m(`descriptions.${module.name.toLowerCase().replace(/\s+/g, '_').normalize('NFD').replace(/[\u0300-\u036f]/g, '')}`)
+    }));
+
+    return (
+      <>
         <main className="mt-8">
           <ServiceHeader details={translatedDetails} />
-          <ModulesGrid modules={gloviaModules} title="Módulos do Glovia® ERP" />
+          <ModulesGrid modules={translatedModules} title={m('modules_title')} />
           <ScrollSpy data={sectionData} />
         </main>
-        </>
-      )
-    } catch (error) {
-      console.log('Translation error:', error);
-      throw error;
-    }
+      </>
+    );
+  } catch (error) {
+    console.log('Translation error:', error);
+    throw error;
   }
+}

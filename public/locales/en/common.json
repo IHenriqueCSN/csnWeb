@@ -97,5 +97,31 @@
         "required_subject": "Please select a subject.",
         "required_agreement": "You must agree to continue.",
         "agreement": "I agree with the privacy policy."
+    },
+
+    "modules": {
+        "glovia": {
+            "modules_title": "Glovia® ERP Modules",
+            "gerenciamento_de_produtos": "Product Management",
+            "gerenciamento_de_clientes": "Customer Management",
+            "gerenciamento_de_fornecedores": "Supplier Management",
+            "business_intelligence": "Business Intelligence",
+            "cadeia_de_suprimentos": "Supply Chain",
+            "manufatura": "Manufacturing",
+            "gerenciamento_de_servicos": "Service Management",
+            "gerenciamento_de_projetos": "Project Management",
+            "financeiro": "Financial Management",
+            "descriptions": {
+            "gerenciamento_de_produtos": "Complete control of product lifecycle, from registration to inventory tracking and technical specifications",
+            "gerenciamento_de_clientes": "Centralized customer data, purchase history and interactions for personalized relationships",
+            "gerenciamento_de_fornecedores": "Strategic management of business partners with performance evaluation and purchase process control",
+            "business_intelligence": "Real-time data analysis with interactive dashboards and reports for strategic decision making",
+            "cadeia_de_suprimentos": "Integrated logistics optimization with demand management, distribution planning and inventory control",
+            "manufatura": "Production process control with resource management, production orders and quality assurance",
+            "gerenciamento_de_servicos": "Organization of contracts, SLAs and technical support for post-sales service excellence",
+            "gerenciamento_de_projetos": "Project planning and monitoring with resource allocation, schedules and performance indicators",
+            "financeiro": "Integrated management of accounts, cash flow, collections and compliance with fiscal accounting standards"
+            }
+        }
     }
 }
