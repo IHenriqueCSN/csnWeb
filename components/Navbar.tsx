@@ -163,17 +163,11 @@ const NavBar = ({ n, s }: { n: NavBarTranslations; s: ServiceTranslations }) => 
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#101044] shadow-md">
-    <div className="max-w-7xl mx-auto px-4">
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center justify-between h-16">
-        <div className="flex items-center gap-4">
-          <NavLink route={ROUTES[0]} currentPath={currentPath} />
-          <NavLink route={ROUTES[1]} currentPath={currentPath} />
-        </div>
-        
-        {/* Centered logo */}
-        <div className="flex justify-center">
-          <Link href={`/${currentLocale}`} className="flex justify-center">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Desktop Navigation - Truly Evenly Spaced Items */}
+        <div className="hidden md:flex items-center justify-evenly h-16">
+          {/* All navigation items in a single row with equal spacing */}
+          <Link href={`/${currentLocale}`} className="flex items-center mx-4">
             <Image
               src="/images/logo.png"
               alt="CSN Technology"
@@ -182,19 +176,14 @@ const NavBar = ({ n, s }: { n: NavBarTranslations; s: ServiceTranslations }) => 
               className="h-12 w-12"
             />
           </Link>
-        </div>
-
-        {/* Right side navigation */}
-        <div className="flex items-center gap-4">
+          <NavLink route={ROUTES[0]} currentPath={currentPath} />
+          <NavLink route={ROUTES[1]} currentPath={currentPath} />
+          
           <ServicesDropdown currentPath={currentPath} />
           <NavLink route={ROUTES[3]} currentPath={currentPath} />
           
-          {/* Language switcher positioned separately */}
-          <LanguageSwitcher
-            currentLocale={currentLocale}
-          />
+          <LanguageSwitcher currentLocale={currentLocale} />
         </div>
-      </div>
 
         {/* Mobile Navigation */}
         <div className="flex md:hidden items-center justify-between h-16">
