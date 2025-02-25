@@ -1,4 +1,5 @@
 import ServiceHeader, { RGB } from "@/components/ServiceHeader";
+import { getTranslations } from "next-intl/server";
 
 const supportColors = {
   primary: 'rgb(39, 5, 0)' as RGB,      // Deep navy blue
@@ -13,12 +14,23 @@ const supportDetails = {
     backgroundImage: "/images/support.jpg"
 }
 
-export default function Upgrades() {
-    return (
-      <>
-      <main className="mt-8">
-        <ServiceHeader details={supportDetails} />
-      </main>
-      </>
-    )
+export default async function Upgrades() {
+    try {
+      const t = await getTranslations('services');
+      const translatedDetails = {
+        ...supportDetails,
+        text: t('support_description'),
+        title: t('support')
+      };
+      return (
+        <>
+        <main className="mt-8">
+          <ServiceHeader details={translatedDetails} />
+        </main>
+        </>
+      )
+    } catch (error) {
+      console.log('Translation error:', error);
+      throw error;
+    }
   }

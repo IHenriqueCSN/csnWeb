@@ -1,5 +1,6 @@
 import ScrollSpy from "@/components/ScrollingSection"
 import ServiceHeader, { RGB } from "@/components/ServiceHeader";
+import { getTranslations } from "next-intl/server";
 
 const webdesignColors = {
   primary: 'rgb(37, 37, 0)' as RGB,      // Deep navy blue
@@ -18,13 +19,25 @@ const sectionData = [
   {id: "why-use", title: "Strategic Advantage", content: "fsmkldfsml"}
 ];
 
-export default function WebDesign() {
-    return (
-      <>
-      <main className="mt-8">
-        <ServiceHeader details={webdesignDetails} />
-        <ScrollSpy data={sectionData} />
-      </main>
-      </>
-    )
+export default async function WebDesign() {
+    try {
+      const t = await getTranslations('services');
+      const translatedDetails = {
+        ...webdesignDetails,
+        text: t('webdesign_description'),
+        title: t('webdesign')
+      };
+
+      return (
+        <>
+        <main className="mt-8">
+          <ServiceHeader details={translatedDetails} />
+          <ScrollSpy data={sectionData} />
+        </main>
+        </>
+      )
+    } catch (error) {
+      console.error('Translation error:', error);
+      throw error;
+    }
   }

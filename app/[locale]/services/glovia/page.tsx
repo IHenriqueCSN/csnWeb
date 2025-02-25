@@ -3,6 +3,7 @@ import ModulesGrid from "@/components/ModulesGrid";
 import { FaStore, FaUser, FaAddressBook, FaTractor, FaChartPie, FaIndustry,
   FaServer, FaChartArea, FaMoneyBill } from "react-icons/fa";
 import ScrollSpy from "@/components/ScrollingSection";
+import { getTranslations } from "next-intl/server";
 
 const gloviaColors = {
   primary: 'rgb(39, 5, 0)' as RGB,
@@ -36,14 +37,25 @@ const gloviaModules = [
   { name: "Financeiro", icon: <FaMoneyBill />, description: "Gestão integrada de contas, fluxo de caixa, cobranças e conformidade com normas fiscais contábeis" }
 ];
 
-export default function Glovia() {
-    return (
-      <>
-      <main className="mt-8">
-        <ServiceHeader details={gloviaDetails} />
-        <ModulesGrid modules={gloviaModules} title="Módulos do Glovia® ERP" />
-        <ScrollSpy data={sectionData} />
-      </main>
-      </>
-    )
+export default async function Glovia() {
+    try {
+      const t = await getTranslations('services');
+      const translatedDetails = {
+        ...gloviaDetails,
+        title: t('glovia'),
+        text: t('glovia_description')
+      };
+      return (
+        <>
+        <main className="mt-8">
+          <ServiceHeader details={translatedDetails} />
+          <ModulesGrid modules={gloviaModules} title="Módulos do Glovia® ERP" />
+          <ScrollSpy data={sectionData} />
+        </main>
+        </>
+      )
+    } catch (error) {
+      console.log('Translation error:', error);
+      throw error;
+    }
   }

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 interface Service {
   image: string;
-  name: string;
+  title: string;
   anchor: string;
 }
 
@@ -56,7 +56,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ title, services }) => {
             <div className="relative flex-shrink-0">
               <Image
               src={service.image}
-              alt={service.name}
+              alt={service.title}
               className="w-full h-48 object-cover"
               width={640}
               height={384}
@@ -67,7 +67,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ title, services }) => {
 
             <div className="p-6 relative flex-grow pb-16 flex items-center justify-center">
               <h3 className="text-2xl font-bold mb-2 text-gray-800">
-              {service.name}
+              {service.title}
               </h3>
             </div>
             </div>

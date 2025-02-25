@@ -11,7 +11,7 @@ export interface HeaderDetails {
     title: string;
     text: string;
     colorScheme: ColorScheme;
-    backgroundImage?: string; // Optional image URL
+    backgroundImage?: string;
 }
 
 export interface HeaderProps {

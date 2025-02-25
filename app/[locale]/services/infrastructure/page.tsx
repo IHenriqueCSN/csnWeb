@@ -1,4 +1,5 @@
 import ServiceHeader, { RGB } from "@/components/ServiceHeader";
+import { getTranslations } from "next-intl/server";
 
 const infrastructureColors = {
   primary: 'rgb(15, 32, 45)' as RGB,      // Deep navy blue
@@ -13,12 +14,23 @@ const infrastructureDetails = {
     backgroundImage: "/images/infra.jpg"
 }
 
-export default function Infrastructure() {
-    return (
-      <>
-      <main className="mt-8">
-        <ServiceHeader details={infrastructureDetails} />
-      </main>
-      </>
-    )
+export default async function Infrastructure() {
+    try {
+      const t = await getTranslations('services');
+      const translatedDetails = {
+        ...infrastructureDetails,
+        title: t('infrastructure'),
+        text: t('infrastructure_description')
+      };
+      return (
+        <>
+        <main className="mt-8">
+          <ServiceHeader details={translatedDetails} />
+        </main>
+        </>
+      )
+    } catch (error) {
+      console.log('Translation error:', error);
+      throw error;
+    }
   }

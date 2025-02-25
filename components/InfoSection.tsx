@@ -12,11 +12,16 @@ interface Content {
   anchor: string;
 }
 
-interface InfoSectionProps {
-  sections: Content[];
+interface InfoSectionTranslations {
+  learn_more: string;
 }
 
-const InfoSection: React.FC<InfoSectionProps> = ({ sections }) => {
+interface InfoSectionProps {
+  sections: Content[];
+  t: InfoSectionTranslations;
+}
+
+const InfoSection: React.FC<InfoSectionProps> = ({ sections, t }) => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
       <div className="space-y-16 overflow-x-hidden">
@@ -109,7 +114,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({ sections }) => {
                     onClick={() => window.location.href = `/services/${section.anchor}`}
                     role="button"
                     >
-                    Saiba Mais
+                    {t.learn_more}
                     </motion.button>
                 </motion.div>
               </div>

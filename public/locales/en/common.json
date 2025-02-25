@@ -4,7 +4,8 @@
         "description": "Integrated solutions in Glovia® ERP, custom development, and high-performance infrastructure to drive your business forward.",
         "motto": "We turn technological challenges into competitive advantages.",
         "cta_call": "Request a Demo",
-        "our_services": "Our Services"
+        "our_services": "Our Services",
+        "learn_more": "Learn More"
     },
     
     "navbar": {
@@ -17,10 +18,16 @@
     "services": {
         "upgrades": "Upgrades",
         "glovia": "Glovia® ERP",
-        "integration": "Integration ERP",
+        "integration": "ERP Integration",
         "webdesign": "Web Design",
         "infrastructure": "Infrastructure",
-        "support": "Support"
+        "support": "Tech Support",
+        "upgrades_description": "Our Installation and Upgrade service ensures your system stays current. With this service, your business can maintain access to the latest software version, complete with all available features and security updates.",
+        "glovia_description": "Glovia® ERP is a comprehensive, integrated enterprise management system that provides solutions across all areas of your business. With this system, you can optimize processes, reduce costs, and increase team productivity.",
+        "integration_description": "Our ERP Integration service enables you to connect different company systems to improve internal efficiency and communication. This integration allows you to automate processes, reduce errors and redundant work, and enhance decision-making.",
+        "webdesign_description": "Create a modern, responsive website for your business with our web design service. This service helps improve user experience, increase brand visibility, and generate more leads and sales for your business.",
+        "infrastructure_description": "Have a high-performance infrastructure to support your business growth. Our Infrastructure service ensures your company has the necessary resources to handle increased demand and business expansion.",
+        "support_description": "Count on specialized technical support to resolve issues and maintain system stability. Our Technical Support service ensures your company has the necessary support to keep your system running efficiently and securely."
     },
 
     "footer": {

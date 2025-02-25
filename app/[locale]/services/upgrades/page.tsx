@@ -1,9 +1,10 @@
 import ServiceHeader, { RGB } from "@/components/ServiceHeader";
+import { getTranslations } from "next-intl/server";
 
 const upgradesColors = {
-  primary: 'rgb(15, 32, 45)' as RGB,      // Deep navy blue
-  secondary: 'rgb(192, 202, 211)' as RGB, // Metallic silver
-  tertiary: 'rgb(255, 255, 255)' as RGB   // Pure white
+  primary: 'rgb(15, 32, 45)' as RGB,
+  secondary: 'rgb(192, 202, 211)' as RGB,
+  tertiary: 'rgb(255, 255, 255)' as RGB
 };
 
 const upgradesDetails = {
@@ -13,12 +14,23 @@ const upgradesDetails = {
     backgroundImage: "/images/upgrade.jpg"
 }
 
-export default function Upgrades() {
-    return (
-      <>
-      <main className="mt-8">
-        <ServiceHeader details={upgradesDetails} />
-      </main>
-      </>
-    )
+export default async function Upgrades() {
+    try {
+      const t = await getTranslations('services');
+      const translatedDetails = {
+        ...upgradesDetails,
+        text: t('upgrades_description'),
+        title: t('upgrades')
+      }
+      return (
+        <>
+        <main className="mt-8">
+          <ServiceHeader details={translatedDetails} />
+        </main>
+        </>
+      )
+    } catch (error) {
+      console.log('Translation error:', error);
+      throw error;
+    }
   }
