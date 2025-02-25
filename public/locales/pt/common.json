@@ -17,7 +17,7 @@
 
     "services": {
         "upgrades": "Instalações e Upgrades",
-        "glovia": "Glovia® ERP",
+        "glovia": "Suporte para Glovia® ERP",
         "integration": "Integração ERP",
         "webdesign": "Web Design",
         "infrastructure": "Infraestrutura",
@@ -123,5 +123,69 @@
                 "financeiro": "Gestão integrada de contas, fluxo de caixa, cobranças e conformidade com normas fiscais contábeis"
                 }
             }
+        },
+
+    "sectiondata": {
+        
+        "glovia": {
+            "why-use": "Vantagem Estratégica",
+            "benefits": "Benefícios para Empresas",
+            "how-it-works": "Excelência Operacional",
+            "testimonials": "Reconhecimento do Setor",
+            "why-use_description": "Nossa equipe de suporte ao Glovia ERP oferece soluções personalizadas que maximizam o potencial do sistema. Garantimos respostas em tempo real para decisões críticas, eficiência operacional otimizada e suporte para vários idiomas para operações globais.",
+            "benefits_description": "Nosso suporte especializado ao Glovia ERP traz benefícios significativos para empresas, incluindo processos simplificados, maior precisão de dados e melhoria na capacidade de tomada de decisões. Com nosso suporte, as empresas experimentam redução de custos operacionais, aumento de produtividade e operações mais eficientes.",
+            "how-it-works_description": "Nossa abordagem para excelência operacional envolve o suporte técnico especializado para o Glovia ERP, integrando-se aos seus fluxos de trabalho existentes. Oferecemos treinamento, suporte contínuo e otimização do sistema para garantir que suas operações funcionem de maneira suave e eficiente.",
+            "testimonials_description": "Ouça de líderes do setor que aprimoraram seus negócios com nosso suporte ao Glovia ERP. Suas histórias de sucesso destacam os benefícios tangíveis, incluindo maior eficiência, redução de custos e uma vantagem competitiva em seus respectivos mercados."
+        },
+        "upgrades": {
+            "why-use": "Atualização Eficiente",
+            "benefits": "Benefícios de Atualização",
+            "how-it-works": "Processo de Atualização",
+            "testimonials": "Satisfação dos Clientes",
+            "why-use_description": "Oferecemos serviços de upgrades para garantir que seus sistemas estejam sempre atualizados com as últimas funcionalidades e correções de segurança. Isso maximiza o desempenho e a estabilidade do seu ambiente tecnológico.",
+            "benefits_description": "Nossos serviços de upgrades trazem benefícios como maior segurança, compatibilidade com novas tecnologias, melhoria no desempenho do sistema e redução de riscos de falhas. Sua empresa fica sempre um passo à frente.",
+            "how-it-works_description": "Nosso processo de upgrade é planejado e executado de forma cuidadosa para minimizar interrupções. Realizamos análise prévia, backups completos e testes rigorosos para garantir uma transição suave e segura.",
+            "testimonials_description": "Clientes que realizaram upgrades conosco relatam maior confiabilidade e desempenho em seus sistemas. Suas experiências comprovam a eficácia e o profissionalismo do nosso trabalho."
+        },
+        "webdesign": {
+            "why-use": "Design Impactante",
+            "benefits": "Benefícios do Design",
+            "how-it-works": "Criação de Sites",
+            "testimonials": "Feedback dos Clientes",
+            "why-use_description": "Criamos designs de websites que combinam estética e funcionalidade, proporcionando uma experiência excepcional ao usuário e fortalecendo a presença digital da sua marca.",
+            "benefits_description": "Nossos serviços de web design oferecem benefícios como aumento do engajamento do usuário, melhor conversão de visitantes em clientes, design responsivo para todos os dispositivos e uma imagem profissional para sua empresa.",
+            "how-it-works_description": "Desenvolvemos websites sob medida, desde a concepção do layout até a implementação final. Trabalhamos com você para entender suas necessidades e entregar um site que atenda aos seus objetivos.",
+            "testimonials_description": "Nossos clientes elogiam a qualidade e a criatividade dos nossos designs. Eles destacam como nossos websites ajudaram a impulsionar seus negócios e melhorar sua visibilidade online."
+        },
+        "infrastructure": {
+            "why-use": "Infraestrutura Confiável",
+            "benefits": "Benefícios da Infraestrutura",
+            "how-it-works": "Gerenciamento de Infraestrutura",
+            "testimonials": "Depoimentos de Clientes",
+            "why-use_description": "Oferecemos soluções de infraestrutura de TI que garantem alta disponibilidade, segurança e escalabilidade para suportar as necessidades do seu negócio.",
+            "benefits_description": "Nossos serviços de infraestrutura proporcionam benefícios como redução de tempo de inatividade, maior segurança de dados, suporte a operações em crescimento e otimização de custos com TI.",
+            "how-it-works_description": "Gerenciamos toda a infraestrutura de TI, desde servidores e redes até armazenamento e virtualização. Implementamos soluções personalizadas para garantir que sua infraestrutura seja robusta e eficiente.",
+            "testimonials_description": "Clientes que confiaram em nossa infraestrutura relatam maior confiabilidade e desempenho em suas operações. Eles destacam nossa capacidade de entregar soluções que atendem às suas demandas."
+        },
+        "support": {
+            "why-use": "Suporte Ágil",
+            "benefits": "Benefícios do Suporte",
+            "how-it-works": "Atendimento Técnico",
+            "testimonials": "Avaliações dos Clientes",
+            "why-use_description": "Nosso suporte técnico oferece respostas rápidas e eficientes para resolver problemas e manter suas operações funcionando sem interrupções.",
+            "benefits_description": "Com nosso suporte técnico, sua empresa ganha benefícios como redução de tempo de inatividade, resolução rápida de problemas, acesso a especialistas e maior produtividade da equipe.",
+            "how-it-works_description": "Oferecemos suporte técnico remoto e presencial, com uma equipe especializada pronta para atender suas necessidades. Nosso objetivo é resolver problemas de forma ágil e eficaz.",
+            "testimonials_description": "Clientes que utilizam nosso suporte técnico destacam a rapidez e a qualidade do atendimento. Eles valorizam nossa capacidade de manter suas operações estáveis e seguras."
+        },
+        "integration": {
+            "why-use": "Integração Eficiente",
+            "benefits": "Benefícios da Integração",
+            "how-it-works": "Processo de Integração",
+            "testimonials": "Depoimentos de Clientes",
+            "why-use_description": "Especializamo-nos em integração de sistemas ERP, conectando diferentes plataformas para garantir fluxos de trabalho eficientes e dados consistentes em toda a organização.",
+            "benefits_description": "Nossos serviços de integração ERP trazem benefícios como maior eficiência operacional, redução de erros manuais, melhoria na visibilidade dos dados e suporte a processos de negócios mais ágeis.",
+            "how-it-works_description": "Realizamos a integração de sistemas ERP de forma personalizada, analisando suas necessidades e conectando suas ferramentas para garantir um fluxo de dados contínuo e seguro.",
+            "testimonials_description": "Clientes que realizaram integração ERP conosco destacam a melhoria na eficiência e na tomada de decisões. Eles valorizam nossa expertise em conectar sistemas de forma eficaz."
         }
+    }
 }

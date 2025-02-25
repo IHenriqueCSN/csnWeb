@@ -18,10 +18,10 @@ const gloviaDetails = {
 }
 
 const sectionData = [
-  { id: 'why-use', title: 'Strategic Advantage', content: "..." },
-  { id: 'benefits', title: 'Enterprise Benefits', content: "..." },
-  { id: 'how-it-works', title: 'Operational Excellence', content: "..." },
-  { id: 'testimonials', title: 'Industry Recognition', content: "..." },
+  { id: 'why-use', title: 'Strategic Advantage', content: "" },
+  { id: 'benefits', title: 'Enterprise Benefits', content: "" },
+  { id: 'how-it-works', title: 'Operational Excellence', content: "" },
+  { id: 'testimonials', title: 'Industry Recognition', content: "" },
 ];
 
 const gloviaModules = [
@@ -40,6 +40,7 @@ export default async function Glovia() {
   try {
     const t = await getTranslations('services');
     const m = await getTranslations('modules.glovia');
+    const s = await getTranslations('sectiondata.glovia');
     
     const translatedDetails = {
       ...gloviaDetails,
@@ -53,12 +54,18 @@ export default async function Glovia() {
     description: m(`descriptions.${module.name.toLowerCase().replace(/\s+/g, '_').normalize('NFD').replace(/[\u0300-\u036f]/g, '')}`)
     }));
 
+    const translatedSectionData = sectionData.map(section => ({
+      ...section,
+      title: s(section.id),
+      content: s(`${section.id}_description`)
+    }))
+
     return (
       <>
         <main className="mt-8">
           <ServiceHeader details={translatedDetails} />
           <ModulesGrid modules={translatedModules} title={m('modules_title')} />
-          <ScrollSpy data={sectionData} />
+          <ScrollSpy data={translatedSectionData} />
         </main>
       </>
     );

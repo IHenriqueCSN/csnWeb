@@ -16,23 +16,34 @@ const webdesignDetails = {
 }
 
 const sectionData = [
-  {id: "why-use", title: "Strategic Advantage", content: "fsmkldfsml"}
+  { id: 'why-use', title: 'Strategic Advantage', content: "" },
+  { id: 'benefits', title: 'Enterprise Benefits', content: "" },
+  { id: 'how-it-works', title: 'Operational Excellence', content: "" },
+  { id: 'testimonials', title: 'Industry Recognition', content: "" },
 ];
 
 export default async function WebDesign() {
     try {
       const t = await getTranslations('services');
+      const s = await getTranslations('sectiondata.webdesign');
+
       const translatedDetails = {
         ...webdesignDetails,
         text: t('webdesign_description'),
         title: t('webdesign')
       };
 
+      const translatedSectionData = sectionData.map(section => ({
+        ...section,
+        title: s(section.id),
+        content: s(`${section.id}_description`)
+      }));
+
       return (
         <>
         <main className="mt-8">
           <ServiceHeader details={translatedDetails} />
-          <ScrollSpy data={sectionData} />
+          <ScrollSpy data={translatedSectionData} />
         </main>
         </>
       )
