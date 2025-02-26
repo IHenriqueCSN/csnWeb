@@ -67,6 +67,7 @@
     try {
       const t = await getTranslations('common');
       const s = await getTranslations('services')
+      const c = await getTranslations('contact_modal');
 
       const translatedServices = baseServices.map(service => ({
         ...service,
@@ -76,7 +77,7 @@
       
       return (
         <>
-          <Hero t={{ welcome: t('welcome'), description: t('description'), cta_call: t('cta_call'), motto: t('motto') }} />
+          <Hero t={{ welcome: t('welcome'), description: t('description'), cta_call: t('cta_call'), motto: t('motto'), contact_title: c('title'), contact_whatsapp: c('whatsapp'), contact_email: c('email'), contact_close: c('close') }} />
           <main className="my-8">
             <ServicesGrid services={translatedServices} title={t('our_services')} />
             <InfoSection sections={translatedServices} t={{learn_more: t('learn_more')}} />

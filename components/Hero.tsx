@@ -8,6 +8,10 @@ interface HeroTranslations {
   description: string;
   motto: string;
   cta_call: string;
+  contact_title: string;
+  contact_whatsapp: string;
+  contact_email: string;
+  contact_close: string;
 }
 
 export default function Hero({ t }: {t: HeroTranslations}) {
@@ -25,6 +29,13 @@ export default function Hero({ t }: {t: HeroTranslations}) {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const contactModalTranslations = {
+    title: t.contact_title,
+    whatsapp: t.contact_whatsapp,
+    email: t.contact_email,
+    close: t.contact_close
+  }
 
   return (
     <header className="relative h-[50vh] md:h-[60vh] overflow-hidden pt-20 md:pt-20">
@@ -67,7 +78,7 @@ export default function Hero({ t }: {t: HeroTranslations}) {
         </button>
       </div>
 
-      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} translations={contactModalTranslations} />
 
     </header>
   )

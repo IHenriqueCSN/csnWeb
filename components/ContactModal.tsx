@@ -6,9 +6,15 @@ import { useEffect, useRef } from 'react'; // Import useRef and useEffect
 interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
+  translations: {
+    title: string;
+    whatsapp: string;
+    email: string;
+    close: string;
+  }
 }
 
-export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
+export default function ContactModal({ isOpen, onClose, translations }: ContactModalProps) {
   const modalRef = useRef<HTMLDivElement>(null); // Ref for the modal content
 
   const openWhatsApp = () => {
@@ -57,20 +63,20 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             transition={{ duration: 0.2 }} // Animation duration
             className="bg-white rounded-lg p-6 w-11/12 max-w-md text-center"
           >
-            <h2 className="text-xl font-bold mb-4 text-gray-800">Entre em Contato</h2>
+            <h2 className="text-xl font-bold mb-4 text-gray-800">{translations.title}</h2>
             <button
               onClick={openWhatsApp}
               className="w-full flex items-center justify-center bg-green-500 text-white py-2 px-4 rounded-md mb-3 hover:bg-green-600 transition"
             >
               <FaWhatsapp className="mr-2" /> {/* WhatsApp icon */}
-              Conversar no WhatsApp
+              {translations.whatsapp}
             </button>
             <button
               onClick={goToContactPage}
               className="w-full flex items-center justify-center bg-blue-500 text-white py-2 px-4 rounded-md mb-3 hover:bg-blue-600 transition"
             >
               <FaEnvelope className="mr-2" /> {/* Email icon */}
-              Enviar um Email
+              {translations.email}
             </button>
             {/* Add more buttons or slots here */}
             <button
@@ -78,7 +84,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               className="w-full flex items-center justify-center bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition"
             >
               <FaTimes className="mr-2" /> {/* Close icon */}
-              Fechar
+              {translations.close}
             </button>
           </motion.div>
         </motion.div>

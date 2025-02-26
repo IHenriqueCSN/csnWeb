@@ -7,14 +7,12 @@
         "our_services": "Our Services",
         "learn_more": "Learn More"
     },
-    
     "navbar": {
         "home": "Home",
         "about_us": "About Us",
         "services": "Services",
         "contact": "Contact"
     },
-
     "services": {
         "upgrades": "Upgrades",
         "glovia": "Glovia® ERP Support",
@@ -29,7 +27,6 @@
         "infrastructure_description": "Have a high-performance infrastructure to support your business growth. Our Infrastructure service ensures your company has the necessary resources to handle increased demand and business expansion.",
         "support_description": "Count on specialized technical support to resolve issues and maintain system stability. Our Technical Support service ensures your company has the necessary support to keep your system running efficiently and securely."
     },
-
     "footer": {
         "about_us": "About Us",
         "privacy": "Privacy Policy",
@@ -38,11 +35,9 @@
         "motto": "Building innovative solutions.",
         "rights": "All rights reserved."
     },
-
     "whatsapp": {
         "whatsapp": "Talk to us on WhatsApp"
     },
-
     "about_us": {
         "header": "Transforming Businesses with Cutting-Edge Technology",
         "header_description": "At CSN Technology, we combine technical expertise with strategic vision to drive digital transformation for businesses. With over a decade of experience, we deliver customized ERP solutions that optimize operations and generate tangible results.",
@@ -72,9 +67,7 @@
         "ethics_text": "We act with integrity, building relationships based on trust and honesty.",
         "collaboration_text": "We value teamwork, believing that effective partnerships lead to more robust solutions and superior results.",
         "excellence_text": "We strive for excellence in everything we do, from delivering our services to building relationships with our clients and collaborators."
-        
     },
-
     "not_found": {
         "header": "Page in Construction",
         "header_description_1": "We are working to bring you an even better experience.",
@@ -82,7 +75,6 @@
         "return_title": "In the meantime, you can return to the homepage.",
         "return_cta": "Click here to go back to the homepage."
     },
-
     "contact": {
         "title": "Contact Us",
         "name": "First Name",
@@ -99,7 +91,6 @@
         "required_agreement": "You must agree to continue.",
         "agreement": "I agree with the privacy policy."
     },
-
     "modules": {
         "glovia": {
             "modules_title": "Glovia® ERP Modules",
@@ -113,87 +104,91 @@
             "gerenciamento_de_projetos": "Project Management",
             "financeiro": "Financial Management",
             "descriptions": {
-            "gerenciamento_de_produtos": "Complete control of product lifecycle, from registration to inventory tracking and technical specifications",
-            "gerenciamento_de_clientes": "Centralized customer data, purchase history and interactions for personalized relationships",
-            "gerenciamento_de_fornecedores": "Strategic management of business partners with performance evaluation and purchase process control",
-            "business_intelligence": "Real-time data analysis with interactive dashboards and reports for strategic decision making",
-            "cadeia_de_suprimentos": "Integrated logistics optimization with demand management, distribution planning and inventory control",
-            "manufatura": "Production process control with resource management, production orders and quality assurance",
-            "gerenciamento_de_servicos": "Organization of contracts, SLAs and technical support for post-sales service excellence",
-            "gerenciamento_de_projetos": "Project planning and monitoring with resource allocation, schedules and performance indicators",
-            "financeiro": "Integrated management of accounts, cash flow, collections and compliance with fiscal accounting standards"
+                "gerenciamento_de_produtos": "Complete control of product lifecycle, from registration to inventory tracking and technical specifications",
+                "gerenciamento_de_clientes": "Centralized customer data, purchase history and interactions for personalized relationships",
+                "gerenciamento_de_fornecedores": "Strategic management of business partners with performance evaluation and purchase process control",
+                "business_intelligence": "Real-time data analysis with interactive dashboards and reports for strategic decision making",
+                "cadeia_de_suprimentos": "Integrated logistics optimization with demand management, distribution planning and inventory control",
+                "manufatura": "Production process control with resource management, production orders and quality assurance",
+                "gerenciamento_de_servicos": "Organization of contracts, SLAs and technical support for post-sales service excellence",
+                "gerenciamento_de_projetos": "Project planning and monitoring with resource allocation, schedules and performance indicators",
+                "financeiro": "Integrated management of accounts, cash flow, collections and compliance with fiscal accounting standards"
             }
         }
     },
-
     "sectiondata": {
-            "glovia": {
-                "why-use": "Strategic Advantage",
-                "benefits": "Enterprise Benefits",
-                "how-it-works": "Operational Excellence",
-                "testimonials": "Industry Recognition",
-                "why-use_description": "Our Glovia ERP support team offers customized solutions that maximize the system's potential. We ensure real-time responses for critical decisions, optimized operational efficiency, and support for multiple languages for global operations. With our dedicated technical expertise, your company can focus on growth while we ensure your ERP platform functions flawlessly, providing a true strategic advantage in today's highly competitive market.",
-                "benefits_description": "Our specialized Glovia ERP support brings significant benefits to businesses, including streamlined processes, greater data accuracy, and improved decision-making capabilities. With our support, companies experience reduced operational costs, increased productivity, and more efficient operations. Additionally, our personalized approach allows you to adapt the system to your industry's specific needs, maximizing the return on your technology investment and creating a solid foundation for sustainable growth.",
-                "how-it-works_description": "Our approach to operational excellence involves specialized technical support for Glovia ERP, integrating with your existing workflows. We offer training, continuous support, and system optimization to ensure your operations run smoothly and efficiently. We implement industry best practices, combined with years of experience, to identify operational bottlenecks and apply solutions that drive productivity. Our team works continuously to adjust and improve your system, ensuring it evolves along with your business.",
-                "testimonials_description": "Hear from industry leaders who have enhanced their businesses with our Glovia ERP support. Their success stories highlight tangible benefits, including increased efficiency, cost reduction, and a competitive advantage in their respective markets. Companies from various segments have recognized our ability to transform operational challenges into growth opportunities through our Glovia ERP expertise. Our market reputation is built on measurable results and long-term relationships with satisfied clients."
-            },
-            "upgrades": {
-                "why-use": "Efficient Upgrades",
-                "benefits": "Upgrade Benefits",
-                "how-it-works": "Upgrade Process",
-                "testimonials": "Customer Satisfaction",
-                "why-use_description": "We offer upgrade services to ensure your systems are always up-to-date with the latest features and security patches. This maximizes the performance and stability of your technological environment. Our meticulous upgrade process minimizes downtime and associated risks, allowing your company to quickly take advantage of technological improvements without significant interruptions to daily operations. We stay updated with the latest advances to ensure you never fall behind.",
-                "benefits_description": "Our upgrade services bring benefits such as enhanced security, compatibility with new technologies, improved system performance, and reduced risk of failures. Your company stays one step ahead. Regular updates also extend the lifespan of your technology investments, protecting them against premature obsolescence and emerging vulnerabilities. With each upgrade, your infrastructure becomes more robust, preparing your organization to face future challenges with confidence and agility.",
-                "how-it-works_description": "Our upgrade process is carefully planned and executed to minimize disruptions. We perform preliminary analysis, complete backups, and rigorous testing to ensure a smooth and safe transition. Our phased approach includes detailed assessment of the current environment, identification of critical dependencies, development of a customized contingency plan, and strategic implementation during low-impact hours for your business. After each update, we provide comprehensive documentation and post-implementation support to ensure continued stability.",
-                "testimonials_description": "Clients who have performed upgrades with us report greater reliability and performance in their systems. Their experiences prove the effectiveness and professionalism of our work. Many highlight how our preventive approach significantly reduced problems that traditionally accompany major system updates. Our customer satisfaction rate exceeding 95% reflects our commitment to excellence and meticulous attention to detail in every upgrade project we undertake."
-            },
-            "webdesign": {
-                "why-use": "Impactful Design",
-                "benefits": "Design Benefits",
-                "how-it-works": "Website Creation",
-                "testimonials": "Customer Feedback",
-                "why-use_description": "We create website designs that combine aesthetics and functionality, providing an exceptional user experience and strengthening your brand's digital presence. Each project is developed with careful attention to visual details, ensuring your site not only attracts visitors but also keeps them engaged and converts them into loyal customers. We use the latest trends in design and UX/UI to create intuitive interfaces that effectively communicate your brand's unique identity and highlight your business in the competitive digital environment.",
-                "benefits_description": "Our web design services offer benefits such as increased user engagement, better conversion of visitors to customers, responsive design for all devices, and a professional image for your company. Well-designed sites load faster, rank better in search engines, and provide intuitive navigation that keeps visitors longer. Investing in professional design is not just an aesthetic matter, but a fundamental business strategy that directly influences your online credibility and commercial results.",
-                "how-it-works_description": "Our web design services offer benefits such as increased user engagement, better conversion of visitors to customers, responsive design for all devices, and a professional image for your company. Well-designed sites load faster, rank better in search engines, and provide intuitive navigation that keeps visitors longer. Investing in professional design is not just an aesthetic matter, but a fundamental business strategy that directly influences your online credibility and commercial results.",
-                "testimonials_description": "Our clients praise the quality and creativity of our designs. They highlight how our websites have helped boost their businesses and improve their online visibility. Many report significant increases in conversion rates, average site stay time, and reduced bounce rates after launching their new sites. Our customer-centered approach, combined with our technical expertise, creates relationships of trust that go beyond the initial project delivery, resulting in long-term partnerships and enthusiastic recommendations."
-            },
-            "infrastructure": {
-                "why-use": "Reliable Infrastructure",
-                "benefits": "Infrastructure Benefits",
-                "how-it-works": "Infrastructure Management",
-                "testimonials": "Customer Testimonials",
-                "why-use_description": "We offer IT infrastructure solutions that ensure high availability, security, and scalability to support your business needs. Our robust architecture is designed to meet the most demanding challenges, providing a stable technological environment even during demand peaks or unforeseen situations. We implement strategic redundancies, proactive monitoring, and advanced security measures to protect your digital assets and ensure uninterrupted operations, allowing you to focus on growing your business with peace of mind.",
-                "benefits_description": "Our infrastructure services provide benefits such as reduced downtime, enhanced data security, support for growing operations, and IT cost optimization. A well-designed infrastructure adapts to your company's varying needs, scaling resources as necessary and eliminating unnecessary spending on underutilized hardware. Our holistic approach considers both your current needs and future plans, creating a technological foundation that evolves organically with your business and maximizes the return on your IT investment.",
-                "how-it-works_description": "We manage the entire IT infrastructure, from servers and networks to storage and virtualization. We implement customized solutions to ensure your infrastructure is robust and efficient. Our team of specialists uses advanced monitoring and automation tools to proactively identify potential problems before they affect your operations. We offer preventive maintenance services, scheduled updates, and continuous performance optimization, ensuring your infrastructure always operates at its maximum potential and keeps pace with technological evolution.",
-                "testimonials_description": "Clients who have trusted our infrastructure report greater reliability and performance in their operations. They highlight our ability to deliver solutions that meet their demands. Many specifically mention how our infrastructure withstood significant challenges, such as unexpected traffic spikes, security breach attempts, and even natural disasters, keeping their critical operations running without interruption. Our ability to quickly adapt infrastructure to changing business needs is also frequently praised as an important competitive differentiator."
-            },
-            "support": {
-                "why-use": "Agile Support",
-                "benefits": "Support Benefits",
-                "how-it-works": "Technical Assistance",
-                "testimonials": "Customer Reviews",
-                "why-use_description": "Our technical support offers quick and efficient responses to solve problems and keep your operations running without interruptions. With response times among the best in the industry, our team is available to meet your technical needs at any time, ensuring that small problems don't turn into major obstacles for your business. We use advanced ticket management systems and remote diagnostic tools to identify and resolve issues quickly, minimizing the impact on your productivity and keeping your critical systems operational.",
-                "benefits_description": "With our technical support, your company gains benefits such as reduced downtime, quick problem resolution, access to specialists, and increased team productivity. Our preventive approach also helps identify potential problems before they cause impact, reducing the need for emergency interventions and allowing for a more stable and predictable work environment. By outsourcing your technical support needs to our specialized team, you free up internal resources to focus on strategic initiatives that drive your business.",
-                "how-it-works_description": "With our technical support, your company gains benefits such as reduced downtime, quick problem resolution, access to specialists, and increased team productivity. Our preventive approach also helps identify potential problems before they cause impact, reducing the need for emergency interventions and allowing for a more stable and predictable work environment. By outsourcing your technical support needs to our specialized team, you free up internal resources to focus on strategic initiatives that drive your business.",
-                "testimonials_description": "Clients who use our technical support highlight the speed and quality of service. They value our ability to keep their operations stable and secure. Many specifically mention the dedication and technical knowledge of our team, as well as our ability to communicate complex solutions in a clear and accessible manner. Our consistently above 98% customer satisfaction average reflects our commitment to excellence in every interaction. The longevity of our client relationships demonstrates the trust they place in our ability to solve their most urgent technical challenges."
-            },
-            "integration": {
-                "why-use": "Efficient Integration",
-                "benefits": "Integration Benefits",
-                "how-it-works": "Integration Process",
-                "testimonials": "Customer Testimonials",
-                "why-use_description": "We specialize in ERP system integration, connecting different platforms to ensure efficient workflows and consistent data throughout the organization. Our expertise spans various technological environments, allowing us to create customized integration solutions that eliminate information silos and automate manual processes. We use proven methodologies and advanced integration tools to create robust connections between systems, ensuring data integrity and minimizing the need for manual intervention in daily operations.",
-                "benefits_description": "Our ERP integration services bring benefits such as greater operational efficiency, reduction of manual errors, improved data visibility, and support for more agile business processes. Successful integration eliminates the need for duplicate data entry, reduces inconsistencies in information, and provides a unified view of business operations. This allows for faster and more accurate decision-making, improves collaboration between departments, and significantly increases your company's ability to adapt to market changes with agility and confidence.",
-                "how-it-works_description": "We perform ERP system integration in a customized way, analyzing your needs and connecting your tools to ensure a continuous and secure data flow. Our structured methodology includes detailed process mapping, identification of critical integration points, development of data transfer protocols, and implementation of rigorous validation and audit measures. We work closely with your teams throughout the process to ensure the final solution perfectly meets your business's specific needs and aligns with your strategic objectives.",
-                "testimonials_description": "Clients who have performed ERP integration with us highlight the improvement in efficiency and decision-making. They value our expertise in effectively connecting systems. Many report significant reductions in order processing time, faster financial closing cycles, and greater accuracy in business forecasts after implementing our integration solutions. The ability to access consistent and up-to-date information in real-time is often cited as an important competitive advantage that has fundamentally transformed the way they manage their operations and serve their own customers."
-            }
+        "glovia": {
+            "why-use": "Strategic Advantage",
+            "benefits": "Enterprise Benefits",
+            "how-it-works": "Operational Excellence",
+            "testimonials": "Industry Recognition",
+            "why-use_description": "Our Glovia ERP support team offers customized solutions that maximize the system's potential. We ensure real-time responses for critical decisions, optimized operational efficiency, and support for multiple languages for global operations. With our dedicated technical expertise, your company can focus on growth while we ensure your ERP platform functions flawlessly, providing a true strategic advantage in today's highly competitive market.",
+            "benefits_description": "Our specialized Glovia ERP support brings significant benefits to businesses, including streamlined processes, greater data accuracy, and improved decision-making capabilities. With our support, companies experience reduced operational costs, increased productivity, and more efficient operations. Additionally, our personalized approach allows you to adapt the system to your industry's specific needs, maximizing the return on your technology investment and creating a solid foundation for sustainable growth.",
+            "how-it-works_description": "Our approach to operational excellence involves specialized technical support for Glovia ERP, integrating with your existing workflows. We offer training, continuous support, and system optimization to ensure your operations run smoothly and efficiently. We implement industry best practices, combined with years of experience, to identify operational bottlenecks and apply solutions that drive productivity. Our team works continuously to adjust and improve your system, ensuring it evolves along with your business.",
+            "testimonials_description": "Hear from industry leaders who have enhanced their businesses with our Glovia ERP support. Their success stories highlight tangible benefits, including increased efficiency, cost reduction, and a competitive advantage in their respective markets. Companies from various segments have recognized our ability to transform operational challenges into growth opportunities through our Glovia ERP expertise. Our market reputation is built on measurable results and long-term relationships with satisfied clients."
         },
-
-        "titles": {
+        "upgrades": {
+            "why-use": "Efficient Upgrades",
+            "benefits": "Upgrade Benefits",
+            "how-it-works": "Upgrade Process",
+            "testimonials": "Customer Satisfaction",
+            "why-use_description": "We offer upgrade services to ensure your systems are always up-to-date with the latest features and security patches. This maximizes the performance and stability of your technological environment. Our meticulous upgrade process minimizes downtime and associated risks, allowing your company to quickly take advantage of technological improvements without significant interruptions to daily operations. We stay updated with the latest advances to ensure you never fall behind.",
+            "benefits_description": "Our upgrade services bring benefits such as enhanced security, compatibility with new technologies, improved system performance, and reduced risk of failures. Your company stays one step ahead. Regular updates also extend the lifespan of your technology investments, protecting them against premature obsolescence and emerging vulnerabilities. With each upgrade, your infrastructure becomes more robust, preparing your organization to face future challenges with confidence and agility.",
+            "how-it-works_description": "Our upgrade process is carefully planned and executed to minimize disruptions. We perform preliminary analysis, complete backups, and rigorous testing to ensure a smooth and safe transition. Our phased approach includes detailed assessment of the current environment, identification of critical dependencies, development of a customized contingency plan, and strategic implementation during low-impact hours for your business. After each update, we provide comprehensive documentation and post-implementation support to ensure continued stability.",
+            "testimonials_description": "Clients who have performed upgrades with us report greater reliability and performance in their systems. Their experiences prove the effectiveness and professionalism of our work. Many highlight how our preventive approach significantly reduced problems that traditionally accompany major system updates. Our customer satisfaction rate exceeding 95% reflects our commitment to excellence and meticulous attention to detail in every upgrade project we undertake."
+        },
+        "webdesign": {
+            "why-use": "Impactful Design",
+            "benefits": "Design Benefits",
+            "how-it-works": "Website Creation",
+            "testimonials": "Customer Feedback",
+            "why-use_description": "We create website designs that combine aesthetics and functionality, providing an exceptional user experience and strengthening your brand's digital presence. Each project is developed with careful attention to visual details, ensuring your site not only attracts visitors but also keeps them engaged and converts them into loyal customers. We use the latest trends in design and UX/UI to create intuitive interfaces that effectively communicate your brand's unique identity and highlight your business in the competitive digital environment.",
+            "benefits_description": "Our web design services offer benefits such as increased user engagement, better conversion of visitors to customers, responsive design for all devices, and a professional image for your company. Well-designed sites load faster, rank better in search engines, and provide intuitive navigation that keeps visitors longer. Investing in professional design is not just an aesthetic matter, but a fundamental business strategy that directly influences your online credibility and commercial results.",
+            "how-it-works_description": "Our web design services offer benefits such as increased user engagement, better conversion of visitors to customers, responsive design for all devices, and a professional image for your company. Well-designed sites load faster, rank better in search engines, and provide intuitive navigation that keeps visitors longer. Investing in professional design is not just an aesthetic matter, but a fundamental business strategy that directly influences your online credibility and commercial results.",
+            "testimonials_description": "Our clients praise the quality and creativity of our designs. They highlight how our websites have helped boost their businesses and improve their online visibility. Many report significant increases in conversion rates, average site stay time, and reduced bounce rates after launching their new sites. Our customer-centered approach, combined with our technical expertise, creates relationships of trust that go beyond the initial project delivery, resulting in long-term partnerships and enthusiastic recommendations."
+        },
+        "infrastructure": {
+            "why-use": "Reliable Infrastructure",
+            "benefits": "Infrastructure Benefits",
+            "how-it-works": "Infrastructure Management",
+            "testimonials": "Customer Testimonials",
+            "why-use_description": "We offer IT infrastructure solutions that ensure high availability, security, and scalability to support your business needs. Our robust architecture is designed to meet the most demanding challenges, providing a stable technological environment even during demand peaks or unforeseen situations. We implement strategic redundancies, proactive monitoring, and advanced security measures to protect your digital assets and ensure uninterrupted operations, allowing you to focus on growing your business with peace of mind.",
+            "benefits_description": "Our infrastructure services provide benefits such as reduced downtime, enhanced data security, support for growing operations, and IT cost optimization. A well-designed infrastructure adapts to your company's varying needs, scaling resources as necessary and eliminating unnecessary spending on underutilized hardware. Our holistic approach considers both your current needs and future plans, creating a technological foundation that evolves organically with your business and maximizes the return on your IT investment.",
+            "how-it-works_description": "We manage the entire IT infrastructure, from servers and networks to storage and virtualization. We implement customized solutions to ensure your infrastructure is robust and efficient. Our team of specialists uses advanced monitoring and automation tools to proactively identify potential problems before they affect your operations. We offer preventive maintenance services, scheduled updates, and continuous performance optimization, ensuring your infrastructure always operates at its maximum potential and keeps pace with technological evolution.",
+            "testimonials_description": "Clients who have trusted our infrastructure report greater reliability and performance in their operations. They highlight our ability to deliver solutions that meet their demands. Many specifically mention how our infrastructure withstood significant challenges, such as unexpected traffic spikes, security breach attempts, and even natural disasters, keeping their critical operations running without interruption. Our ability to quickly adapt infrastructure to changing business needs is also frequently praised as an important competitive differentiator."
+        },
+        "support": {
+            "why-use": "Agile Support",
+            "benefits": "Support Benefits",
+            "how-it-works": "Technical Assistance",
+            "testimonials": "Customer Reviews",
+            "why-use_description": "Our technical support offers quick and efficient responses to solve problems and keep your operations running without interruptions. With response times among the best in the industry, our team is available to meet your technical needs at any time, ensuring that small problems don't turn into major obstacles for your business. We use advanced ticket management systems and remote diagnostic tools to identify and resolve issues quickly, minimizing the impact on your productivity and keeping your critical systems operational.",
+            "benefits_description": "With our technical support, your company gains benefits such as reduced downtime, quick problem resolution, access to specialists, and increased team productivity. Our preventive approach also helps identify potential problems before they cause impact, reducing the need for emergency interventions and allowing for a more stable and predictable work environment. By outsourcing your technical support needs to our specialized team, you free up internal resources to focus on strategic initiatives that drive your business.",
+            "how-it-works_description": "With our technical support, your company gains benefits such as reduced downtime, quick problem resolution, access to specialists, and increased team productivity. Our preventive approach also helps identify potential problems before they cause impact, reducing the need for emergency interventions and allowing for a more stable and predictable work environment. By outsourcing your technical support needs to our specialized team, you free up internal resources to focus on strategic initiatives that drive your business.",
+            "testimonials_description": "Clients who use our technical support highlight the speed and quality of service. They value our ability to keep their operations stable and secure. Many specifically mention the dedication and technical knowledge of our team, as well as our ability to communicate complex solutions in a clear and accessible manner. Our consistently above 98% customer satisfaction average reflects our commitment to excellence in every interaction. The longevity of our client relationships demonstrates the trust they place in our ability to solve their most urgent technical challenges."
+        },
+        "integration": {
+            "why-use": "Efficient Integration",
+            "benefits": "Integration Benefits",
+            "how-it-works": "Integration Process",
+            "testimonials": "Customer Testimonials",
+            "why-use_description": "We specialize in ERP system integration, connecting different platforms to ensure efficient workflows and consistent data throughout the organization. Our expertise spans various technological environments, allowing us to create customized integration solutions that eliminate information silos and automate manual processes. We use proven methodologies and advanced integration tools to create robust connections between systems, ensuring data integrity and minimizing the need for manual intervention in daily operations.",
+            "benefits_description": "Our ERP integration services bring benefits such as greater operational efficiency, reduction of manual errors, improved data visibility, and support for more agile business processes. Successful integration eliminates the need for duplicate data entry, reduces inconsistencies in information, and provides a unified view of business operations. This allows for faster and more accurate decision-making, improves collaboration between departments, and significantly increases your company's ability to adapt to market changes with agility and confidence.",
+            "how-it-works_description": "We perform ERP system integration in a customized way, analyzing your needs and connecting your tools to ensure a continuous and secure data flow. Our structured methodology includes detailed process mapping, identification of critical integration points, development of data transfer protocols, and implementation of rigorous validation and audit measures. We work closely with your teams throughout the process to ensure the final solution perfectly meets your business's specific needs and aligns with your strategic objectives.",
+            "testimonials_description": "Clients who have performed ERP integration with us highlight the improvement in efficiency and decision-making. They value our expertise in effectively connecting systems. Many report significant reductions in order processing time, faster financial closing cycles, and greater accuracy in business forecasts after implementing our integration solutions. The ability to access consistent and up-to-date information in real-time is often cited as an important competitive advantage that has fundamentally transformed the way they manage their operations and serve their own customers."
+        }
+    },
+    "titles": {
         "about-us": "About Us",
         "contact": "Contact",
         "integration": "ERP Integration",
         "infrastructure": "Infrastructure",
         "support": "Tech Support"
+    },
+    "contact_modal": {
+        "title": "Contact Us",
+        "whatsapp": "Chat on WhatsApp",
+        "email": "Send an Email",
+        "close": "Close"
     }
 }

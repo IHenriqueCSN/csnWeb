@@ -2,7 +2,8 @@ import AboutUs from "@/components/AboutUs";
 import { getTranslations } from "next-intl/server";
 
 export default async function Contato() {
-  const t = await getTranslations("about_us")
+  const t = await getTranslations("about_us");
+  const c = await getTranslations('contact_modal');
     return (
       <>
       <main className="mt-8">
@@ -35,7 +36,11 @@ export default async function Contato() {
             commitment_text: t('commitment_text'),
             ethics_text: t('ethics_text'),
             collaboration_text: t('collaboration_text'),
-            excellence_text: t('excellence_text')
+            excellence_text: t('excellence_text'),
+            contact_title: c('title'),
+            contact_whatsapp: c('whatsapp'),
+            contact_email: c('email'),
+            contact_close: c('close')
           }}
         />
       </main>

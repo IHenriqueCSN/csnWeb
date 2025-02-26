@@ -34,10 +34,21 @@ interface AboutUsTranslations {
   ethics_text: string;
   collaboration_text: string;
   excellence_text: string;
+  contact_title: string;
+  contact_whatsapp: string;
+  contact_email: string;
+  contact_close: string;
 }
 
 export default function AboutPage({t}: {t: AboutUsTranslations}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const contactModalTranslations = {
+    title: t.contact_title,
+    whatsapp: t.contact_whatsapp,
+    email: t.contact_email,
+    close: t.contact_close
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -205,7 +216,7 @@ export default function AboutPage({t}: {t: AboutUsTranslations}) {
           </button>
         </div>
       </div>
-      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} translations={contactModalTranslations} />
     </div>
   );
 }

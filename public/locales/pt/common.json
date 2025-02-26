@@ -7,14 +7,12 @@
         "our_services": "Nossos Serviços",
         "learn_more": "Saiba Mais"
     },
-
     "navbar": {
         "home": "Home",
         "about_us": "Sobre Nós",
         "services": "Serviços",
         "contact": "Contato"
     },
-
     "services": {
         "upgrades": "Instalações e Upgrades",
         "glovia": "Suporte para Glovia® ERP",
@@ -29,7 +27,6 @@
         "infrastructure_description": "Tenha uma infraestrutura de alta performance para suportar o crescimento do seu negócio. Com o serviço de Infraestrutura, é possível garantir que a sua empresa tenha os recursos necessários para suportar o aumento da demanda e a expansão dos negócios.",
         "support_description": "Conte com um suporte técnico especializado para resolver problemas e manter a estabilidade do seu sistema. Com o serviço de Suporte Técnico, é possível garantir que a sua empresa tenha o apoio necessário para manter o seu sistema funcionando de forma eficiente e segura."
     },
-
     "footer": {
         "about_us": "Sobre Nós",
         "privacy": "Política de Privacidade",
@@ -38,11 +35,9 @@
         "motto": "Construindo soluções inovadoras",
         "rights": "Todos os direitos reservados."
     },
-
     "whatsapp": {
         "whatsapp": "Fale conosco pelo WhatsApp"
     },
-
     "about_us": {
         "header": "Transformando Negócios com Tecnologia de Ponta",
         "header_description": "Na CSN Technology, combinamos expertise técnica com visão estratégica para impulsionar a transformação digital de empresas. Com mais de uma década de experiência, entregamos soluções ERP personalizadas que otimizam operações e geram resultados tangíveis.",
@@ -72,9 +67,7 @@
         "ethics_text": "Atuamos com integridade, construindo relacionamentos baseados na confiança e na honestidade.",
         "collaboration_text": "Valorizamos o trabalho em equipe, acreditando que parcerias efetivas levam a soluções mais robustas e resultados superiores.",
         "excellence_text": "Buscamos a excelência em tudo o que fazemos, desde a entrega dos nossos serviços até o relacionamento com nossos clientes e colaboradores."
-
     },
-
     "not_found": {
         "header": "Página em Construção",
         "header_description_1": "Estamos trabalhando para trazer uma experiência ainda melhor para você.",
@@ -82,7 +75,6 @@
         "return_title": "Enquanto isso, você pode retornar à página inicial.",
         "return_cta": "Clique aqui para retornar à pagina inicial."
     },
-
     "contact": {
         "title": "Entre em Contato Conosco",
         "name": "Nome",
@@ -99,7 +91,6 @@
         "required_agreement": "Você deve concordar para continuar.",
         "agreement": "Eu concordo com a política de privacidade (LGDP)."
     },
-    
     "modules": {
         "glovia": {
             "modules_title": "Módulos do Glovia® ERP",
@@ -122,12 +113,10 @@
                 "gerenciamento_de_servicos": "Organização de contratos, SLA's e atendimentos técnicos para excelência em serviços pós-venda",
                 "gerenciamento_de_projetos": "Planejamento e acompanhamento de projetos com alocação de recursos, cronogramas e indicadores de desempenho",
                 "financeiro": "Gestão integrada de contas, fluxo de caixa, cobranças e conformidade com normas fiscais contábeis"
-                }
             }
-        },
-
+        }
+    },
     "sectiondata": {
-        
         "glovia": {
             "why-use": "Vantagem Estratégica",
             "benefits": "Benefícios para Empresas",
@@ -189,12 +178,17 @@
             "testimonials_description": "Clientes que realizaram integração ERP conosco destacam a melhoria na eficiência e na tomada de decisões. Eles valorizam nossa expertise em conectar sistemas de forma eficaz. Muitos relatam reduções significativas em tempo de processamento de pedidos, ciclos de fechamento financeiro mais rápidos e maior precisão nas previsões de negócios após a implementação de nossas soluções de integração. A capacidade de acessar informações consistentes e atualizadas em tempo real é frequentemente citada como um diferencial competitivo importante que transformou fundamentalmente a maneira como gerenciam suas operações e servem seus próprios clientes."
         }
     },
-
     "titles": {
         "about-us": "Sobre Nós",
         "contact": "Contato",
         "integration": "Integração ERP",
         "infrastructure": "Infraestrutura",
         "support": "Suporte Técnico"
+    },
+    "contact_modal": {
+        "title": "Entre em Contato",
+        "whatsapp": "Conversar no WhatsApp",
+        "email": "Enviar um Email",
+        "close": "Fechar"
     }
 }
