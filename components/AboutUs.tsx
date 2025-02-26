@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { Briefcase, Users, Trophy, Cpu, Target, Star, Gem, Award, Scale, Handshake } from "lucide-react"; // Requires lucide-react package
+import ContactModal from "./ContactModal";
+import { useState } from "react";
 
 interface AboutUsTranslations {
   header: string;
@@ -35,6 +37,8 @@ interface AboutUsTranslations {
 }
 
 export default function AboutPage({t}: {t: AboutUsTranslations}) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -196,11 +200,12 @@ export default function AboutPage({t}: {t: AboutUsTranslations}) {
             {t.cta_description}
           </p>
           <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            onClick={() => window.location.href = "/contact"}>
+            onClick={() => setIsModalOpen(true)}>
             {t.cta_call}
           </button>
         </div>
       </div>
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
+import ContactModal from './ContactModal';
 
 interface HeroTranslations {
   welcome: string;
@@ -11,6 +12,7 @@ interface HeroTranslations {
 
 export default function Hero({ t }: {t: HeroTranslations}) {
   const bgRef = useRef<HTMLDivElement>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,11 +61,14 @@ export default function Hero({ t }: {t: HeroTranslations}) {
             </span>
           </p>
         <button className="mt-6 md:mt-8 rounded-md bg-blue-800 px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base font-bold transition hover:bg-blue-700 hover:scale-105"
-          onClick={() => window.location.href = "/contact"}>
+          onClick={() => setIsModalOpen(true)}>
           {/* Solicite uma Demonstração */}
           {t.cta_call}
         </button>
       </div>
+
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
     </header>
   )
 }
