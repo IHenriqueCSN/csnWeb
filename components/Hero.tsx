@@ -1,7 +1,6 @@
 "use client";
 import { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { Trans } from "next-i18next";
 
 interface HeroTranslations {
   welcome: string;
