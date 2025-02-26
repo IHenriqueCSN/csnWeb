@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Briefcase, Users, Trophy, Heart, Target, Star, Gem, Award, Scale, Handshake } from "lucide-react"; // Requires lucide-react package
+import { Briefcase, Users, Trophy, Cpu, Target, Star, Gem, Award, Scale, Handshake } from "lucide-react"; // Requires lucide-react package
 
 interface AboutUsTranslations {
   header: string;
@@ -188,7 +188,7 @@ export default function AboutPage({t}: {t: AboutUsTranslations}) {
       {/* CTA Section */}
       <div className="bg-blue-600 text-white py-12 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Heart className="h-16 w-16 mx-auto mb-8" />
+          <Cpu className="h-16 w-16 mx-auto mb-8" />
           <h2 className="text-3xl font-bold mb-6">
             {t.cta_title}
           </h2>

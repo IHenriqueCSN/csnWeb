@@ -9,6 +9,7 @@ interface ContactFormTranslations {
   name: string;
   surname: string;
   email: string;
+  invalid_email: string;
   phone: string;
   subject: string;
   select_subject: string;
@@ -36,6 +37,7 @@ const ContactForm = ({t}: {t: ContactFormTranslations}) => {
   const onSubmit: SubmitHandler<ContactFormData> = data => {
     console.log(data);
     // Add form submission logic here
+    // use either formsubmit.co or web3forms.com
   };
 
   return (
@@ -100,7 +102,7 @@ const ContactForm = ({t}: {t: ContactFormTranslations}) => {
               <p className="mt-1 text-sm text-red-600">{t.required_field}</p>
             )}
             {errors.email?.type === "pattern" && (
-              <p className="mt-1 text-sm text-red-600">Por favor informe um email válido</p>
+              <p className="mt-1 text-sm text-red-600">{t.invalid_email}</p>
             )}
           </div>
 
@@ -177,12 +179,7 @@ const ContactForm = ({t}: {t: ContactFormTranslations}) => {
                 htmlFor="privacyPolicy" 
                 className="text-xs sm:text-sm text-slate-600 leading-snug sm:leading-normal cursor-pointer hover:text-slate-700 transition-colors"
                 >
-                Eu concordo com a{' '}
-                <span className="text-blue-600 hover:underline">
-                    política de privacidade
-                </span>
-                <span className="hidden sm:inline-block text-xs text-slate-400 ml-1">(LGPD)</span>
-                <span className="sm:hidden text-xs text-slate-400 block mt-1">Lei Geral de Proteção de Dados</span>
+                  {t.agreement}
                 </label>
             </div>
             {errors.privacyPolicy && (

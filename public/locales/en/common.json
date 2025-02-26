@@ -88,6 +88,7 @@
         "name": "First Name",
         "surname": "Last Name",
         "email": "Email",
+        "invalid_email": "Please provide a valid email address",
         "phone": "Phone Number",
         "subject": "Subject",
         "select_subject": "Select a subject...",
@@ -186,5 +187,13 @@
                 "how-it-works_description": "We perform ERP system integration in a customized way, analyzing your needs and connecting your tools to ensure a continuous and secure data flow. Our structured methodology includes detailed process mapping, identification of critical integration points, development of data transfer protocols, and implementation of rigorous validation and audit measures. We work closely with your teams throughout the process to ensure the final solution perfectly meets your business's specific needs and aligns with your strategic objectives.",
                 "testimonials_description": "Clients who have performed ERP integration with us highlight the improvement in efficiency and decision-making. They value our expertise in effectively connecting systems. Many report significant reductions in order processing time, faster financial closing cycles, and greater accuracy in business forecasts after implementing our integration solutions. The ability to access consistent and up-to-date information in real-time is often cited as an important competitive advantage that has fundamentally transformed the way they manage their operations and serve their own customers."
             }
-        }
+        },
+
+        "titles": {
+        "about-us": "About Us",
+        "contact": "Contact",
+        "integration": "ERP Integration",
+        "infrastructure": "Infrastructure",
+        "support": "Tech Support"
+    }
 }

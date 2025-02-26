@@ -88,6 +88,7 @@
         "name": "Nome",
         "surname": "Sobrenome",
         "email": "Email",
+        "invalid_email": "Por favor informe um endereço de email válido.",
         "phone": "Telefone",
         "subject": "Assunto",
         "select_subject": "Selecione um tópico...",
@@ -187,5 +188,13 @@
             "how-it-works_description": "Realizamos a integração de sistemas ERP de forma personalizada, analisando suas necessidades e conectando suas ferramentas para garantir um fluxo de dados contínuo e seguro. Nossa metodologia estruturada inclui mapeamento detalhado de processos, identificação de pontos de integração críticos, desenvolvimento de protocolos de transferência de dados e implementação de medidas rigorosas de validação e auditoria. Trabalhamos em estreita colaboração com suas equipes durante todo o processo para garantir que a solução final atenda perfeitamente às necessidades específicas do seu negócio e se alinhe com seus objetivos estratégicos.",
             "testimonials_description": "Clientes que realizaram integração ERP conosco destacam a melhoria na eficiência e na tomada de decisões. Eles valorizam nossa expertise em conectar sistemas de forma eficaz. Muitos relatam reduções significativas em tempo de processamento de pedidos, ciclos de fechamento financeiro mais rápidos e maior precisão nas previsões de negócios após a implementação de nossas soluções de integração. A capacidade de acessar informações consistentes e atualizadas em tempo real é frequentemente citada como um diferencial competitivo importante que transformou fundamentalmente a maneira como gerenciam suas operações e servem seus próprios clientes."
         }
+    },
+
+    "titles": {
+        "about-us": "Sobre Nós",
+        "contact": "Contato",
+        "integration": "Integração ERP",
+        "infrastructure": "Infraestrutura",
+        "support": "Suporte Técnico"
     }
 }
