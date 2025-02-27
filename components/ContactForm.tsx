@@ -111,10 +111,10 @@ const ContactForm = ({t}: {t: ContactFormTranslations}) => {
       />
 
       <style jsx global>{`
-          .grecaptcha-badge {
-            left: 0 !important;
-          }
-        `}</style>
+        .grecaptcha-badge {
+          visibility: hidden !important;
+        }
+      `}</style>
       
       <div className="py-8 px-4 sm:px-6 lg:px-8 mt-20 mb-2">
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden border-l-2 md:border-l-4 border-blue-600">
@@ -288,12 +288,6 @@ const ContactForm = ({t}: {t: ContactFormTranslations}) => {
                 )}
               </div>
 
-              {/* reCAPTCHA Info */}
-              <div className="col-span-1 sm:col-span-2 flex items-center justify-center space-x-2 text-xs text-slate-500 mt-2">
-                <FaShieldAlt className="text-slate-400" />
-                <span>Protected by reCAPTCHA</span>
-              </div>
-
               {/* Submit Button */}
               <div className="col-span-1 sm:col-span-2 mt-4">
                 <button
@@ -331,6 +325,10 @@ const ContactForm = ({t}: {t: ContactFormTranslations}) => {
               </div>
             </form>
           )}
+          <div className="col-span-1 sm:col-span-2 flex items-center justify-center space-x-2 text-xs text-slate-500 mt-2 pb-8">
+            <FaShieldAlt className="text-slate-400" />
+            <span>This site is protected by reCAPTCHA and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Terms of Service</a> apply.</span>
+          </div>
         </div>
       </div>
     </>
