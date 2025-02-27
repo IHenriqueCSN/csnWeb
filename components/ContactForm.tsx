@@ -37,7 +37,7 @@ interface ContactFormData {
 
 declare global {
   interface Window {
-    grecaptcha: any;
+    grecaptcha: ReCaptchaV2.ReCaptcha;
     onRecaptchaLoad: () => void;
   }
 }
@@ -137,7 +137,7 @@ const ContactForm = ({t}: {t: ContactFormTranslations}) => {
                 {t.success_message || "Thank you for your message!"}
               </h3>
               <p className="text-slate-600">
-                We've received your submission and will get back to you soon.
+                We&apos;ve received your submission and will get back to you soon.
               </p>
             </div>
           ) : (
