@@ -20,9 +20,11 @@ interface ContactFormTranslations {
   required_field: string;
   required_subject: string;
   required_agreement: string;
-  success_message?: string;
-  error_message?: string;
-  captcha_error?: string;
+  sending: string;
+  success_message: string;
+  error_message: string;
+  captcha_error: string;
+  received_message: string;
 }
 
 interface ContactFormData {
@@ -134,10 +136,10 @@ const ContactForm = ({t}: {t: ContactFormTranslations}) => {
                 <FaCheck className="h-8 w-8 text-green-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-800 mb-2">
-                {t.success_message || "Thank you for your message!"}
+                {t.success_message}
               </h3>
               <p className="text-slate-600">
-                We&apos;ve received your submission and will get back to you soon.
+                {t.received_message}
               </p>
             </div>
           ) : (
@@ -301,7 +303,7 @@ const ContactForm = ({t}: {t: ContactFormTranslations}) => {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      <span>Sending...</span>
+                      <span>{t.sending}</span>
                     </>
                   ) : (
                     <>
@@ -313,21 +315,29 @@ const ContactForm = ({t}: {t: ContactFormTranslations}) => {
                 
                 {formStatus === 'error' && (
                   <div className="mt-4 p-3 bg-red-50 text-red-700 rounded-md text-sm text-center">
-                    {t.error_message || "There was an error submitting your message. Please try again."}
+                    {t.error_message}
                   </div>
                 )}
                 
                 {formStatus === 'captcha-error' && (
                   <div className="mt-4 p-3 bg-red-50 text-red-700 rounded-md text-sm text-center">
-                    {t.captcha_error || "CAPTCHA verification failed. Please try again later."}
+                    {t.captcha_error}
                   </div>
                 )}
               </div>
             </form>
           )}
-          <div className="col-span-1 sm:col-span-2 flex items-center justify-center space-x-2 text-xs text-slate-500 mt-2 pb-8">
-            <FaShieldAlt className="text-slate-400" />
-            <span>This site is protected by reCAPTCHA and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Terms of Service</a> apply.</span>
+          <div className="col-span-1 sm:col-span-2 text-center mt-2 pb-4 px-3">
+            <div className="inline-flex items-center justify-center mb-1">
+              <FaShieldAlt className="text-slate-400 mr-1" />
+              <span className="text-xs text-slate-500">Protected by reCAPTCHA</span>
+            </div>
+            <div className="text-xs text-slate-500">
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Privacy Policy</a>
+              {" & "}
+              <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Terms of Service</a>
+              {" apply"}
+            </div>
           </div>
         </div>
       </div>

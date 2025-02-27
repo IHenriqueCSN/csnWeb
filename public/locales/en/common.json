@@ -89,7 +89,12 @@
         "required_field": "This field is required.",
         "required_subject": "Please select a subject.",
         "required_agreement": "You must agree to continue.",
-        "agreement": "I agree with the privacy policy."
+        "agreement": "I agree with the privacy policy.",
+        "sending": "Sending...",
+        "success_message": "Thank you for your message!",
+        "error_message": "There was an error submitting your message. Please try again.",
+        "captcha_error": "CAPTCHA verification failed. Please try again later.",
+        "received_message": "We've received your submission and will get back to you soon."
     },
     "modules": {
         "glovia": {

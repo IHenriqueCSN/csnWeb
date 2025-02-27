@@ -89,7 +89,12 @@
         "required_field": "Este campo é obrigatório.",
         "required_subject": "Por favor, selecione um assunto.",
         "required_agreement": "Você deve concordar para continuar.",
-        "agreement": "Eu concordo com a política de privacidade (LGDP)."
+        "agreement": "Eu concordo com a política de privacidade (LGDP).",
+        "sending": "Enviando...",
+        "success_message": "Agradecemos o contato!",
+        "error_message": "Houve um erro ao enviar sua mensagem. Por favor tente novamente.",
+        "captcha_error": "Falha na verificação do CAPTCHA. Tente novamente mais tarde.",
+        "received_message": "Recebemos sua mensagem e entraremos em contato em breve."
     },
     "modules": {
         "glovia": {
