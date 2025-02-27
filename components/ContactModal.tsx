@@ -1,7 +1,7 @@
 "use client";
-import { FaWhatsapp, FaEnvelope, FaTimes } from 'react-icons/fa'; // Import icons
-import { motion, AnimatePresence } from 'framer-motion'; // Import framer-motion
-import { useEffect, useRef } from 'react'; // Import useRef and useEffect
+import { FaWhatsapp, FaEnvelope, FaTimes } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -15,7 +15,7 @@ interface ContactModalProps {
 }
 
 export default function ContactModal({ isOpen, onClose, translations }: ContactModalProps) {
-  const modalRef = useRef<HTMLDivElement>(null); // Ref for the modal content
+  const modalRef = useRef<HTMLDivElement>(null);
 
   const openWhatsApp = () => {
     window.open('https://wa.me/PHONE_NUMBER', '_blank');
@@ -23,23 +23,21 @@ export default function ContactModal({ isOpen, onClose, translations }: ContactM
   };
 
   const goToContactPage = () => {
-    window.location.href = '/contact';
+    const locale = document.documentElement.lang;
+    window.location.href = `/${locale}/contact`;
   };
 
-  // Handle click outside the modal
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
-        onClose(); // Close the modal if the click is outside
+        onClose();
       }
     };
 
-    // Add event listener when the modal is open
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     }
 
-    // Clean up the event listener when the modal closes or the component unmounts
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -49,18 +47,18 @@ export default function ContactModal({ isOpen, onClose, translations }: ContactM
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0 }} // Start with 0 opacity
-          animate={{ opacity: 1 }} // Animate to full opacity
-          exit={{ opacity: 0 }} // Animate back to 0 opacity on exit
-          transition={{ duration: 0.2 }} // Animation duration
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
         >
           <motion.div
             ref={modalRef} // Attach the ref to the modal content
-            initial={{ scale: 0.9, opacity: 0 }} // Start slightly scaled down and transparent
-            animate={{ scale: 1, opacity: 1 }} // Animate to full scale and opacity
-            exit={{ scale: 0.9, opacity: 0 }} // Animate back to scaled down and transparent on exit
-            transition={{ duration: 0.2 }} // Animation duration
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            transition={{ duration: 0.2 }}
             className="bg-white rounded-lg p-6 w-11/12 max-w-md text-center"
           >
             <h2 className="text-xl font-bold mb-4 text-gray-800">{translations.title}</h2>
